@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset and Legend</title>
+
+<style>
+
+    fieldset{
+        border: 5px solid rgb(0, 255, 217);
+        width: 500px;
+        margin-left: 350px;
+        margin-top: 100px;
+        background-color: black;
+        box-shadow: 10px 10px 30px red;
+        border-radius: 15px;
+        padding: 20px;
+    }    
+
+    dl{
+        display: grid;
+        grid-template-columns: 6fr 6fr;
+    }
+
+    dt{
+        background-color: grey;
+        margin-bottom: 10px;
+        padding: 15px;
+        border-radius: 10px;
+        color: white;
+        font-size: 25px;
+
+    }
+    dd{
+        background-color: greenyellow;
+        color: blue;
+        font-size: 25px;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    legend{
+        text-align: center;
+        border: 5px solid green;
+        border-radius: 10px;
+        background-color: black;
+        color: cyan;
+        padding: 15px;
+        width: 140px;
+        font-size: 20px;
+        box-shadow: 10px 10px 30px yellow;
+    }
+    body{
+        background-color: black;
+        border: 100px groove blue;
+        border-radius: 40px;
+        padding: 40px;
+        box-shadow: 0px 0px 50px yellow;
+    }
+</style>
+</head>
+<body>
+    
+    <fieldset>
+        <legend>Electronics</legend>
+        <dl>
+            <dt>Item name</dt>
+            <dd>Laptop</dd>
+            <dt>Brand</dt>
+            <dd>Acer</dd>
+            <dt>price</dt>
+            <dd>50000</dd>
+        </dl>
+
+    </fieldset>
+    <fieldset>
+        <legend>Electronics</legend>
+        <dl>
+            <dt>Item name</dt>
+            <dd>Laptop</dd>
+            <dt>Brand</dt>
+            <dd>Acer</dd>
+            <dt>price</dt>
+            <dd>50000</dd>
+        </dl>
+    </fieldset>
+
+
+</body>
+</html>

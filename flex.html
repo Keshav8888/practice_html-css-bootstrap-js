@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        #child{
+            display: flex;
+            /* display: grid;
+            grid-template-columns: 4fr 4fr 4fr;  */
+            margin-bottom: 20px;
+            
+        }
+        li{
+            margin-right: 40px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <ol type="1">
+        <li>Phones
+            <ol type="a" id="child">
+                <li>oppo</li>
+                <li>vivo</li>
+                <li>mi</li>
+            </ol>
+        </li>
+
+        <li>Laptop
+            <ol type="A" id="child">
+                <li>Acer</li>
+                <li>hp</li>
+                <li>lenovo</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>

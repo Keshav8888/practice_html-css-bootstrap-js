@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unorderedlist</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .parentlist li{
+            /* list-style: none;  */
+            /* it will remove all the bullet points from li*/
+
+            list-style-type: square; 
+            /* list-style-type can be (square,disc,circle) ,from using this custom bullet symbols can be square or disc or circle */
+
+            /* list-style-image: url("./images/ants.gif");   */
+            /* from this we can give custom bullet symbols like gifs */
+
+            border: 4px solid black;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: 1.5s;
+            color: red;
+        }
+        .parentlist ul{
+            width: 200px;
+            margin-top: 130px;
+            margin-left: 600px;
+        }
+        .parentlist li:hover{
+            font-size: 25px;
+            transition: 1.5s;
+            border: 4px solid green;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            background-color: black;
+            color: white;
+        }
+        .bootstrapicon li{
+            width: 150px;
+            list-style: circle;
+            background-color: yellow;
+            padding: 20px;
+            margin-left: 600px;
+            border: 4px solid black;
+        }
+        .bootstrapicon li{
+            padding: 25px;
+            margin-bottom: 20px;
+            color: red;
+        }
+        .bootstrapicon li:hover{
+            font-size: 25px;
+            transition: 1.5s;
+            border: 4px solid green;
+            border-top-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="parentlist">
+        <ul>
+            <li>Smartphone</li>
+            <li>Speaker</li>
+            <li>Headphone</li>
+            <li>Earphone</li>
+            <li>Charger</li>
+            <li>Laptop</li>
+        </ul>
+    </nav>
+    <nav class="bootstrapicon">
+        <ul>
+            <!-- here we can use different symbols for each list list items(li) using bootstrap-->
+            <li class="bi bi-house">Home</li>
+            <li class="bi bi-person">Profile</li>
+            <li class="bi bi-facebook">Facebook</li>
+        </ul>
+    </nav>
+</body>
+</html>

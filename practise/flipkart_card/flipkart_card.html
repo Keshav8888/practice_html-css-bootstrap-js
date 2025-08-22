@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flipkart card</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        body{
+            font-family: Inter,-apple-system,Helvetica,Arial,sans-serif;
+        }
+        .container{
+            display: flex;
+            margin-left: 132px;
+            margin-top: 20px;
+        }
+        .container:hover{
+            cursor: pointer;
+        }
+        .container:hover .heading{
+            color: rgb(31, 106, 192);
+        }
+        .container .heading{
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .card img{
+            height: 230px;
+            width: 200px;
+        }
+        .heart{
+            margin-left: 10px;
+        }
+        .f-assured{
+            display: flex;
+            margin-top: 10px;
+        }
+        .f-assured img{
+            height: 25px;
+            width: 100px;
+        }
+        .f-assured .price17{
+            display: flex;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .price17 .bi-currency-rupee{
+            width: 19px;
+        }
+        /* .price17 .p17{
+            margin-left: 0px;
+        } */
+        .flipkart_assured{
+            margin-left: 30px;
+            
+        }
+        .price34{
+            display: flex;
+            color: rgb(135,135,135);
+            margin-top: 7px;
+        }
+        .price34 .bi-currency-rupee{
+            width: 13px;
+        }
+        .price34 .off48{
+            margin-left: 10px;
+            font-weight: bold;
+            color: green;
+            font-size: 13px;
+        }
+        .card .green{
+            background-color: rgb(200, 223, 200);
+            color: green;
+            width: 169px;
+            margin-top: 5px;
+            padding: 5px;
+        }
+        .square{
+            margin-top: 10px;
+            display: flex;
+        }
+        .square #grey{
+            color: rgb(135,135,135);
+        }
+        .card .compare{
+            margin-left: 5px;
+        }
+        .card .compare:hover{
+            font-weight: bold;
+        }
+        .card .rating{
+            display: flex;
+            color: white;
+            background-color: green;
+            width: 40px;
+            border-radius: 4px;
+            padding-left: 7px;
+            padding-right: 5px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
+        .bi-star-fill{
+            margin-left: 3px;
+        }
+        .ratingstar{
+            display: flex;
+            margin-top: 7px;
+        }
+        .ratingstar .rating9420{
+            margin-left: 10px;
+            color: rgb(135,135,135);
+        }
+        .details li{
+            list-style: none;
+        }
+        .detail{
+            margin-top: 5px;
+        }
+        .details .detail{
+            display: flex;
+        }
+        .detail .dot{
+            margin-top: 6px;
+            background-color: rgb(135,135,135);
+            width: 5px;
+            height: 5px;
+            border-radius: 30px;
+        }
+        .detail li{
+            margin-left: 10px;
+            font-size: 15px;
+        }
+        #card{
+            margin-left: 40px;
+        }
+        .pink{
+            color: rgb(199,0,85);
+            margin-top: 5px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+                <img src="./phone1.webp" alt="phone">
+            <div class="square">
+                <div id="grey" class="bi bi-square"></div>
+                <div class="compare">Add to compare</div>
+            </div>
+        </div>
+        <div class="heart">
+            <img  height="20" src="./heart.svg" alt="heart">
+        </div>
+        <div class="card" id="card">
+            <div class="heading">OPPO F27 Pro+ (Midnight Navy, 256 GB)</div>
+            <div class="ratingstar">
+                <div class="rating">
+                    <div>
+                        4.4
+                    </div>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+                <span class="rating9420">9,420 Ratings & 374 Reviews</span>
+            </div>
+            <div class="details">
+                <ol>
+                    <div class="detailitem">
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>8 GB RAM | 256 GB ROM</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>17.02 cm (6.7 inch) Full HD+ Display</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>64MP + 2MP | 8MP Front Camera</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>5000 mAh Battery</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>Dimensity 7050 Processor</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>1 Year manufacturer Warrenty for device and 6 months Manufacturer Warrenty for Inbox Accessories</li>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+        </div>
+        <div class="card" id="card1">
+            <div class="f-assured">
+                <div class="price17">
+                    <span class="bi bi-currency-rupee"></span>
+                    <div class="p17">17,999</div>
+                </div>
+                <img class="flipkart_assured" src="./flipkart_assured.png" alt="f-assured">
+            </div>
+            <div class="price34">
+                <span class="bi bi-currency-rupee"></span><del>34999</del>
+                <div class="off48">48% off</div>
+            </div>
+            <div class="green">Lowest price in the year</div>
+            <div class="pink">Only 2 left</div>
+        </div>
+    </div>
+</body>
+</html>

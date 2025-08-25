@@ -13,7 +13,8 @@
         .container{
             display: flex;
             margin-left: 132px;
-            margin-top: 20px;
+            margin-top: 30px;
+            margin-bottom: 40px;
         }
         .container:hover{
             cursor: pointer;
@@ -35,6 +36,7 @@
         .f-assured{
             display: flex;
             margin-top: 10px;
+            margin-left: -5px;
         }
         .f-assured img{
             height: 25px;
@@ -44,6 +46,7 @@
             display: flex;
             font-weight: bold;
             font-size: 25px;
+            padding-left: 0px;
         }
         .price17 .bi-currency-rupee{
             width: 19px;
@@ -59,6 +62,7 @@
             display: flex;
             color: rgb(135,135,135);
             margin-top: 7px;
+            margin-left: -3px;
         }
         .price34 .bi-currency-rupee{
             width: 13px;
@@ -66,12 +70,12 @@
         .price34 .off48{
             margin-left: 10px;
             font-weight: bold;
-            color: green;
+            color: rgb(56, 142, 60);
             font-size: 13px;
         }
         .card .green{
             background-color: rgb(200, 223, 200);
-            color: green;
+            color: rgb(38, 165, 65);
             width: 169px;
             margin-top: 5px;
             padding: 5px;
@@ -111,6 +115,9 @@
             margin-left: 10px;
             color: rgb(135,135,135);
         }
+        .detail{
+            width: 680px;
+        }
         .details li{
             list-style: none;
         }
@@ -139,9 +146,133 @@
             margin-top: 5px;
             font-size: 13px;
         }
+        .deals{
+            margin-top: 5px;
+            color: rgb(38, 165, 65);
+            /* color: green; */
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .off{
+            margin-top: 5px;
+            font-size: 13px;
+            display: flex;
+        }
+        .off .bi-currency-rupee{
+            width: 11px;
+        }
+        .off .offon{
+            margin-left: 4px;
+        }
+
+        .grey-line{
+            background-color: rgb(200, 200, 200);
+            height: 0.5px;
+        }
     </style>
 </head>
 <body>
+    <div class="container">
+        <div class="card">
+                <img src="./phone2.webp" alt="phone">
+            <div class="square">
+                <div id="grey" class="bi bi-square"></div>
+                <div class="compare">Add to compare</div>
+            </div>
+        </div>
+        <div class="heart">
+            <img  height="20" src="./heart.svg" alt="heart">
+        </div>
+        <div class="card" id="card">
+            <div class="heading">Motorola g45 5G (Pantone Dahlia Purple, 128 GB)</div>
+            <div class="ratingstar">
+                <div class="rating">
+                    <div>
+                        4.3
+                    </div>
+                    <span class="bi bi-star-fill"></span>
+                </div>
+                <span class="rating9420">2,04,167 Ratings & 10,433 Reviews</span>
+            </div>
+            <div class="details">
+                <ol>
+                    <div class="detailitem">
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>8 GB RAM | 128 GB ROM | Expandable Upto 1 TB</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>16.51 cm (6.5 inch) HD+ Display</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>50MP + 2MP | 16MP Front Camera</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>5000 mAh Battery</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>Snapdragon 6s Gen 3 Processor</li>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <div class="dot">
+                                
+                            </div>
+                            <div>
+                                <li>1 Year Warrenty on Handset and 6 months Warrenty on Accessories</li>
+                            </div>
+                        </div>
+                    </div>
+                </ol>
+            </div>
+        </div>
+        <div class="card" id="card1">
+            <div class="f-assured">
+                <div class="price17">
+                    <span class="bi bi-currency-rupee"></span>
+                    <div class="p17">11,999</div>
+                </div>
+                <img class="flipkart_assured" src="./flipkart_assured.png" alt="f-assured">
+            </div>
+            <div class="price34">
+                <span class="bi bi-currency-rupee"></span><del>14,999</del>
+                <div class="off48">20% off</div>
+            </div>
+            <!-- <div class="green">Super Deals</div> -->
+             <div class="deals">Super Deals</div>
+            <!-- <div class="pink">Only 2 left</div> -->
+            <div class="off">
+                Upto <div class="bi bi-currency-rupee"></div><b>9,050 </b>
+                <div class="offon">Off on Exchange</div> 
+            </div>
+        </div>
+    </div>
+
+    <hr class="grey-line">
+
     <div class="container">
         <div class="card">
                 <img src="./phone1.webp" alt="phone">
@@ -154,7 +285,7 @@
             <img  height="20" src="./heart.svg" alt="heart">
         </div>
         <div class="card" id="card">
-            <div class="heading">OPPO F27 Pro+ (Midnight Navy, 256 GB)</div>
+            <div class="heading">OPPO F27 Pro+ (Midnight Navy, 128 GB)</div>
             <div class="ratingstar">
                 <div class="rating">
                     <div>
@@ -172,7 +303,7 @@
                                 
                             </div>
                             <div>
-                                <li>8 GB RAM | 256 GB ROM</li>
+                                <li>8 GB RAM | 128 GB ROM</li>
                             </div>
                         </div>
                         <div class="detail">
@@ -223,16 +354,16 @@
             <div class="f-assured">
                 <div class="price17">
                     <span class="bi bi-currency-rupee"></span>
-                    <div class="p17">17,999</div>
+                    <div class="p17">15,999</div>
                 </div>
                 <img class="flipkart_assured" src="./flipkart_assured.png" alt="f-assured">
             </div>
             <div class="price34">
-                <span class="bi bi-currency-rupee"></span><del>34999</del>
-                <div class="off48">48% off</div>
+                <span class="bi bi-currency-rupee"></span><del>32,999</del>
+                <div class="off48">51% off</div>
             </div>
             <div class="green">Lowest price in the year</div>
-            <div class="pink">Only 2 left</div>
+            <div class="pink">Only 1 left</div>
         </div>
     </div>
 </body>

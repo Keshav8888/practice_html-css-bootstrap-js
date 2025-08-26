@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target Class</title>
+
+    <style>
+        .topics{
+            border: 1px solid red;
+            background-color: lightgrey;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .topics:target{
+            /* Target Class is used to highlight the active topic */
+            background-color: black;
+            color: white;
+        }
+        nav{
+            background-color: black;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+        }
+        li{
+            margin-right: 40px;
+        }
+        a{
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JavaScript</a></li>
+        </ul>
+    </nav>
+    <div class="topics" id="html">
+        <h1>HTML</h1>
+        <p>It is a markup language</p>
+    </div>
+     <div class="topics" id="css">
+        <h1>CSS</h1>
+        <p>It defines styles for HTML</p>
+    </div>
+     <div class="topics" id="js">
+        <h1>JavaScript</h1>
+        <p>It is a programming language</p>
+    </div>
+</body>
+</html>

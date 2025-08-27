@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap layout</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        /* .container-fluid{
+            border: 2px solid red;
+        } */
+    </style>
+</head>
+<body class="container-fluid">
+    <h2 class="ms-4 mb-4 mt-3">Bootstrap</h2>
+    <p class="pb-4 ps-3 pt-2 border border-4 border-warning rounded rounded-pill text-end">UI design components</p>
+    <img class="border border-4 border-success rounded rounded-circle" src="./images/jacket.jpg" alt="">
+    
+    <button class="w-50">click me</button>
+
+    <dl class="row">
+            <dt class="col-6 text-warning">Name</dt>
+            <dd class="col-6">Samsung TV</dd>
+            <dt class="col-6 text-success">Price</dt>
+            <dd class="col-6">56000.44</dd>
+            <dt class="col-6 text-info">Stock</dt>
+            <dd class="col-6">Available</dd>
+        </dl>
+
+        <header>
+            <h1 class="text-danger text-center">Amazon Shopping</h1>
+        </header>
+        <section class="row" style="height: 150px;">
+            <nav class="col-4">
+                navigation
+            </nav>
+            <main class="col-4">
+                main..
+            </main>
+            <aside class="col-4">
+                ads..
+            </aside>
+        </section>
+        <footer>
+            &copy; copyright 2022
+        </footer>
+
+        <!-- Multiple Rows and Columns -->
+        <div class="row border border-3 border-dark">
+            <div class="col text-center bg-warning">Single Column</div>
+        </div>
+        <div class="row mt-2">
+            <div class="col border border-3 border-dark">
+                even col-1
+            </div>
+            <div class="col border border-3 border-danger">
+                even col-2
+            </div>
+        </div>
+        <div class="row mt-2 ">
+            <div class="col-4 border border-3 border-success">
+                 col-3
+            </div>
+            <div class="col-4 border border-3 border-primary">
+                col-7
+            </div>
+            <div class="col-4 border border-3 border-secondary">
+                col-2
+            </div>
+        </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

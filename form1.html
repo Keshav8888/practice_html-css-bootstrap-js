@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form textbox and checkbox</title>
+</head>
+<body>
+    <form action="" method="post">
+        <dl>
+            <dt>Name</dt>
+            <dd><input type="text" name="name" size="30" minlength="5" maxlength="10"  autofocus placeholder="Enter name" required></dd>
+            <dt>Password</dt>
+            <dd><input type="password" name="password" value="123" placeholder="Enter password" required></dd>
+            <dt>Email</dt>
+            <dd><input type="email" name="emailid" pattern="^[a-zA-Z]+[a-zA-Z0-9]*@gmail.com$" placeholder="Enter emailid" required></dd>
+            <dt>Phone no</dt>
+            <dd><input type="phoneno" name="number" pattern="^91-\d{10}$"></dd>
+            <dd>I agree to given terms and conditions</dd>
+            <dt><input type="checkbox"></dt>
+        </dl>
+        <button>
+            Submit
+        </button>
+
+    </form>
+
+    <form align="center">
+        <h1>Google</h1>
+        <input type="text" list="terms" name="searchgoogle">
+        <datalist id="terms">
+            <option>HTML</option>
+            <option>CSS</option>
+            <option>JavaScript</option>
+        </datalist>
+        <p>
+            <button>Submit</button>
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down list and List Box in Form</title>
+</head>
+
+<body>
+    <form>
+        <!-- Drop down list-->
+        <h1>Amazon</h1>
+        <select name="category">
+            <option>Select a category</option>
+            <optgroup label="Clothes">
+                <option value="SHRT001">Shirt</option>  <!-- Here value means the data written inside the value will be submitted -->
+                <option>Jeans</option>
+                <option>Shoes</option>
+            </optgroup>
+            <optgroup label="Electronics">
+                <option disabled>Speaker</option> <!-- disabled is used to disable that option so that it cannot be selected -->
+                <option selected>Mobile</option> <!-- selected is use to select a option by default-->
+                <option>Laptop</option>
+            </optgroup>
+        </select>
+
+        <!-- List Box (used to select multiple options from a drop down list)-->
+        <select name="language" size="2" multiple> <!-- Here multiple helps to choose multiple options-->
+            <option>Select a language</option>
+            <optgroup label="languages">
+                <option>English</option>
+                <option>हिंदी</option>
+                <option>தமிழ்</option>
+            </optgroup>
+        </select>
+        
+    </form>
+</body>
+
+</html>

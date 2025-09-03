@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Textarea and Buttons in Form</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form>
+        <!-- Textarea -->
+
+        <fieldset>
+            <legend>your comments</legend>
+            <textarea rows="4" cols="40">your text...</textarea>
+        </fieldset>
+        <p>
+            <button>Post Comment</button>
+        </p>
+
+        <!-- Buttons -->
+        <!-- 1. Generic buttons -->
+        <fieldset>
+            <legend>User name</legend>
+            <input type="text" name="username">
+            <button type="submit"><span class="bi bi-person-fill"></span>Register</button>
+            <button type="reset"><img src="./images/neckband.jpg" width="20" height="40"></button>
+        </fieldset>
+
+        <!-- 2. Non-Generic buttons -->
+         <fieldset>
+            <legend>User name</legend>
+            <input type="text" name="username">
+            <input type="button" value="print">
+            <button type="button"><span class="bi bi-printer-fill"></span> Print</button>
+         </fieldset>
+    </form>
+</body>
+</html>

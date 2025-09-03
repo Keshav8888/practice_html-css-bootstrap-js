@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox in Form</title>
+
+    <style>
+        ol{
+            list-style: none;
+            border: 2px solid rgb(0, 247, 255);
+            width: 100px;
+            overflow: auto;   /* to make checkbox list scrollable */
+            height: 100px;
+        }
+        li{
+            margin-left: -30px;
+        }
+        .terms+span{
+            color: red;
+        }
+        .terms:checked+span{
+            color: green;
+        }
+
+        .term+span{
+            display: none;
+        }
+        .term:checked+span{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Select Courses</h1>
+        <ol>
+            <li>
+                <input type="checkbox" checked value="HTML" name="Course">HTML
+            </li>
+            <li>
+                <input type="checkbox" value="CSS" name="Course">CSS
+            </li>
+            <li>
+                <input type="checkbox" value="JS" name="Course">JavaScript
+            </li>
+            <li>
+                <input type="checkbox" checked value="HTML" name="Course">HTML
+            </li>
+            <li>
+                <input type="checkbox" value="CSS" name="Course">CSS
+            </li>
+            <li>
+                <input type="checkbox" value="JS" name="Course">JavaScript
+            </li>
+            <li>
+                <input type="checkbox" checked value="HTML" name="Course">HTML
+            </li>
+            <li>
+                <input type="checkbox" value="CSS" name="Course">CSS
+            </li>
+            <li>
+                <input type="checkbox" value="JS" name="Course">JavaScript
+            </li>
+            <button>Submit</button>
+        </ol>
+
+        <div class="container">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id voluptatem mollitia, magni natus molestiae voluptate unde ipsam. Fuga, aspernatur itaque.
+        </div>
+        <p>
+            <input type="checkbox" class="terms"><span>I accept</span>
+        </p>
+
+        <div class="container2">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id voluptatem mollitia, magni natus molestiae voluptate unde ipsam. Fuga, aspernatur itaque.
+        </div>
+        <p>
+            <input type="checkbox" class="term"><span>I accept</span>
+        </p>
+    </form>
+</body>
+</html>

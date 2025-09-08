@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar and restaurent</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            background: #a17a73;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 50px;
+            padding-right: 100px;
+            /* z-index: 1000; */
+        }
+
+        .navbar h2 {
+            font-size: 22px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.5s;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        section {
+            padding: 100px 50px;
+            min-height: 100vh;
+        }
+
+        #home {
+            background: url("./images/bar-and-restaurant.jpg") no-repeat center/cover;
+            color: rgb(255, 0, 0);
+        }
+
+        #home h1 {
+            background-color: rgb(173, 165, 165);
+            padding: 15px;
+            width: 490px;
+            font-size: 35px;
+            border-radius: 10px;
+            margin-left: 400px;
+            margin-top: 200px;
+        }
+
+        #home p {
+            margin-left: 450px;
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        #products h2 {
+            color: red;
+            margin-left: 600px;
+            font-size: 30px;
+        }
+        #products p{
+            margin-top: 10px;
+            margin-left: 625px;
+            text-decoration: underline;
+            font-size: 15px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product {
+            background: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* .product:hover {
+            transform: translateY(-5px);
+        } */
+
+        .product h5 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #444;
+        }
+
+        .product img {
+            width: 100%;
+            height: 180px;
+            /* object-fit: cover; */
+            border-radius: 8px;
+        }
+
+        footer h1 {
+            color: red;
+            margin-left: 600px;
+        }
+
+        .footer {
+            display: flex;
+            margin-top: 20px;
+            margin-left: 580px;
+        }
+
+        .footer:hover {
+            cursor: pointer;
+        }
+
+        .footer div {
+            margin-left: 10px;
+        }
+
+        .footer .bi-youtube {
+            color: red;
+        }
+
+        .footer .bi-facebook {
+            color: blue;
+        }
+
+        .footer .bi-whatsapp {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2>Bar and Restaurant</h2>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#profile">Profile</a>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div>
+            <h1>Welcome to our Restaurant</h1>
+        </div>
+        <p>
+            Here we provide facilities of Restaurant with Bar...
+        </p>
+    </section>
+
+    <!-- Products section -->
+    <!-- <section> -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <p>Our offered products:</p>
+        <div class="product-grid">
+
+
+            <div class="product">
+                <h5>Beer</h5>
+                <img src="./images/drinks1.jpg" alt="Beer">
+            </div>
+
+            <div class="product">
+                <h5>Whisky</h5>
+                <img src="./images/drinks2.jpg" alt="Whisky">
+            </div>
+
+            <div class="product">
+                <h5>Rum</h5>
+                <img src="./images/drinks3.jpg" alt="Rum">
+            </div>
+
+            <div class="product">
+                <h5>Vodka</h5>
+                <img src="./images/drinks4.jpg" alt="Vodka">
+            </div>
+
+            <div class="product">
+                <h5>Gin</h5>
+                <img src="./images/drinks5.webp" alt="Gin">
+            </div>
+
+            <div class="product">
+                <h5>Wine</h5>
+                <img src="./images/drinks6.jpg" alt="Wine">
+            </div>
+
+            <div class="product">
+                <h5>Tequila</h5>
+                <img src="./images/drinks7.jpeg" alt="Tequila">
+            </div>
+
+            <div class="product">
+                <h5>Brandy</h5>
+                <img src="./images/drinks8.jpg" alt="Brandy">
+            </div>
+
+            <div class="product">
+                <h5>Spirit</h5>
+                <img src="./images/drinks9.webp" alt="Spirit">
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- profile section -->
+    <footer>
+        <section id="profile">
+            <div>
+                <h1>View our Profile</h1>
+                <div class="footer">
+                    <div class="bi bi-youtube">Youtube</div>
+                    <div class="bi bi-facebook">Facebook</div>
+                    <div class="bi bi-whatsapp">Whatsapp</div>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

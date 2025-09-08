@@ -1,0 +1,63 @@
+
+<!-- 1. Make all <p>s that are nested inside div with 25px font-size
+2. Give all <p>s inside 3rd div blue background and text color is white
+3. Give 2nd <p> inside 3rd div,5px red solid  border
+4. Make <em> tag in the 2nd <div> with white color 30 px font-size and green background -->
+    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 25px;
+        }
+        .three{
+            background-color: blue;
+            color: white;
+        }
+        .three2nd{
+            border: 5px solid red;
+        }
+        .two em{
+            font-size: 30px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam. Et optio rerum, natus ut tempore quas
+            facere aspernatur corporis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam. Et optio rerum, natus ut tempore quas
+            facere aspernatur corporis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ullam. Et optio rerum, natus ut tempore quas
+            facere aspernatur corporis!</p>
+    </div>
+    <div class="two">
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero placeat repellendus tenetur ab cumque
+            aperiam non eum eaque, dolorum fuga!</p>
+        <p> <em>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</em> Libero placeat repellendus tenetur ab cumque
+            aperiam non eum eaque, dolorum fuga!</p>
+        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero placeat repellendus tenetur ab cumque
+            aperiam non eum eaque, dolorum fuga!</p>
+    </div>
+    <div class="three">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quas consectetur eligendi laborum fuga quo
+            quisquam maiores nesciunt, distinctio nostrum.</p>
+        <p class="three2nd">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quas consectetur eligendi laborum fuga quo
+            quisquam maiores nesciunt, distinctio nostrum.</p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quas consectetur eligendi laborum fuga quo
+            quisquam maiores nesciunt, distinctio nostrum.</p>
+    </div>
+</body>
+
+</html>

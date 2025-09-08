@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center">
+        <form class="w-25 p-2 border border-3 rounded rounded-2 border-primary">
+            <h2>Register User</h2>
+            <div class="mb-3">
+                <label class="form-label" for="UserName">User Name</label>
+                <div>
+                    <input type="text" class="form-control" name="UserName">
+                    <div>
+                        <span class="text-danger">User Name Required</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="Password">Password</label>
+                <div>
+                    <input type="password" class="form-control" name="Password">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Select City</label>
+                <div>
+                    <select class="form-select">
+                        <option>Choose your City</option>
+                        <option>Delhi</option>
+                        <option>Noida</option>
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date of Birth</label>
+                <div>
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Select price range</label>
+                <div>
+                    <input type="range" class="form-range">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Terms of Service</label>
+                <div>
+                    <textarea rows="4" class="form-control">Terms and conditions you have to accept.</textarea>
+                </div>
+                <div class="form-switch">
+                    <input type="checkbox" checked class="form-check-input"> <label class="form-check-label">I
+                        Accept</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary w-100">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- form input group -->
+    <h3>Password</h3>
+    <div class="input-group">
+        <span class="bi bi-key-fill input-group-text"></span>
+        <input type="password" class="form-control">
+        <span class="bi bi-check-circle-fill input-group-text"></span>
+    </div>
+    <h3>Amazon Search Bar</h3>
+    <div class="input-group">
+        <select class="input-group-text">
+            <option value="">Choose your choice</option>
+            <option>Clothes</option>
+            <option>Shoes</option>
+        </select>
+        <input type="text" class="form-control">
+        <button class="btn btn-warning">
+            <span class="bi bi-search"></span>
+        </button>
+    </div>
+    <h3>Netflix Register</h3>
+    <div class="input-group input-group-lg">
+        <input type="email" class="form-control" placeholder="Your email address">
+        <button class="btn btn-danger">
+            Get Started
+            <span class="bi bi-chevron-right"></span>
+        </button>
+    </div>
+    <h3>Text Append</h3>
+    <div class="input-group">
+        <input type="email" class="form-control">
+        <span class="input-group-text">@gmail.com</span>
+    </div>
+    <h3>Prepend and Append</h3>
+    <div class="input-group">
+        <span class="input-group-text">&#8377;</span>
+        <input type="text" class="form-control">
+        <span class="input-group-text">.00</span>
+    </div>
+
+    <!-- Bootstrap Modal -->
+
+    <h2>Modal</h2>
+    <button data-bs-target="#register" data-bs-toggle="modal" class="btn btn-primary">Register</button>
+    <button data-bs-target="#details" data-bs-toggle="modal" class="btn btn-danger">Product Details</button>
+    <div class="modal fade" id="details">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Product Details</h3>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./images/jacket.jpg" width="200" height="200">
+                    <dl>
+                        <dt>Name</dt>
+                        <dd>Winter Jacket</dd>
+                        <dt>Price</dt>
+                        <dd>5600.44</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="register">
+        <div class="modal-dialog modal-fullscreen  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Register User</h3>
+                    <button data-bs-dismiss="modal" class="btn-close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label class="form-label" for="UserName">User Name</label>
+                        <div>
+                            <input type="text" class="form-control" name="UserName">
+                            <div>
+                                <span class="text-danger">User Name Required</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="Password">Password</label>
+                        <div>
+                            <input type="password" class="form-control" name="Password">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Select City</label>
+                        <div>
+                            <select class="form-select">
+                                <option>Choose Your City</option>
+                                <option>Delhi</option>
+                                <option>Hyderabad</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Date of Birth</label>
+                        <div>
+                            <input type="date" class="form-control">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Select Price Range</label>
+                        <div>
+                            <input type="range" class="form-range">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Terms of Service</label>
+                        <div>
+                            <textarea rows="4" disabled
+                                class="form-control">Terms and conditions you have to accept.</textarea>
+                        </div>
+                        <div class="form-switch">
+                            <input type="checkbox" checked class="form-check-input"> <label class="form-check-label">I
+                                Accept</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Register</button>
+                    <button data-bs-dismiss="modal" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Collapse -->
+
+    <h2>Product Details</h2>
+    <dl>
+        <dt>Name</dt>
+        <dd>Nike Casuals</dd>
+        <dt><button class="btn btn-primary" data-bs-target="#preview" data-bs-toggle="collapse">Preview -
+                Toggle</button></dt>
+        <dd>
+            <div class="collapse show fade" id="preview">
+                <img src="./images/shoe.jpeg" width="200" height="200">
+            </div>
+        </dd>
+    </dl>
+
+    <!-- Bootstrap Accordion -->
+
+    <h2>Netflix FAQ's</h2>
+    <div class="accordion" id="faqs">
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <a href="#q1" data-bs-toggle="collapse" class="btn btn-dark w-100">What is Netflix</a>
+            </div>
+            <div data-bs-parent="#faqs" class="accordion-body show collapse accordion-collapse" id="q1">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+                    documentaries and more – on thousands of internet-connected devices.
+                </p>
+                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly
+                    price. There's always something new to discover, and new TV shows and movies are added every week!
+                </p>
+            </div>
+        </div>
+        <div class="accordion-item" data-bs-parent="#faqs">
+            <div class="accordion-header">
+                <a href="#q2" data-bs-toggle="collapse" class="btn btn-dark w-100">How much does Netflix Cost?</a>
+            </div>
+            <div data-bs-parent="#faqs" class="accordion-body collapse accordion-collapse" id="q2">
+                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed
+                    monthly fee. Plans range from ₹ 149 to ₹ 649 a month. No extra costs, no contracts.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+
+        </div>
+    </div>
+
+    <!-- Bootstrap Dropdown -->
+
+    <h2 class="mt-4">DropDown</h2>
+    <p>Your use of this software is subject to the terms and conditions of the license agreement by which you acquired
+        this software. If you are a volume license customer, use of this software is subject to your volume license
+        agreement. You may not use this software if you have not validly acquired a license for the software from
+        Microsoft or its licensed distributors.</p>
+    <div class="dropend">
+        <button data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle">
+            <span class="bi bi-globe"></span>
+            Language
+        </button>
+        <div class="dropdown-menu bg-dark">
+            <div class="dropdown-item ">
+                <a href="#" class="text-white">
+                    <span class="bi bi-alarm"></span> English
+                </a>
+            </div>
+            <div class="dropdown-item">
+                <a href="#" class="text-white"> हिन्दी</a>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">
+                <a href="#" class="text-white">Help?</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Tables -->
+
+    <h2>Products Table</h2>
+    <table class="table table-hover table-light table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Samsung TV</td>
+                <td>56000.44</td>
+            </tr>
+            <tr>
+                <td>Nike Casuals</td>
+                <td>5399.44</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item"><a class="page-link">&laquo;</a></li>
+                        <li class="page-item"><a class="page-link">1</a></li>
+                        <li class="page-item active"><a class="page-link">2</a></li>
+                        <li class="page-item"><a class="page-link">3</a></li>
+                        <li class="page-item"><a class="page-link">4</a></li>
+                        <li class="page-item"><a class="page-link">&raquo;</a></li>
+                    </ul>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Bootstrap Images -->
+    <!-- The image will be responsive (scales within its parent container).
+    It will be styled like a thumbnail (border, padding, rounded edges, white background). -->
+
+    <h2>Images</h2>
+    <img class="img-fluid img-thumbnail" src="./images/neckband.jpg">
+
+
+    <!-- Bootstrap Progress -->
+
+    <h2>HTML Progress</h2>
+    <progress min="1" max="100" value="60"></progress> 60%
+    <h2>Bootstrap Progress</h2>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 40%;">
+            40% Completed
+        </div>
+        <div class="progress-bar progress-bar-animated progress-bar-striped bg-danger" style="width:60%">
+            60% Remaining
+        </div>
+    </div>
+
+
+    <!-- Bootstrap Spinners -->
+
+    <h2>Spinners</h2>
+    <button class="btn btn-primary">
+        <span class="spinner-border spinner-border-sm"></span>
+        Loading..
+    </button>
+    <button class="btn btn-primary">
+        <span class="spinner-grow spinner-grow-sm"></span>
+        Loading..
+    </button>
+
+
+    <!-- Bootstrap Nav with Tabs -->
+
+    <h2>Tab Base Nav</h2>
+        <ul class="nav nav-pills">
+            <li class="nav-item active"><a data-bs-toggle="tab" href="#basic" class="nav-link">Basic Details</a></li>
+            <li class="nav-item"><a data-bs-toggle="tab" href="#preview" class="nav-link">Preview</a></li>
+            <li class="nav-item"><a data-bs-toggle="tab" href="#description" class="nav-link">Description</a></li>
+        </ul>
+        <div class="tab-content mt-4">
+            <div class="tab-pane active" id="basic">
+                <h3>Basic Details</h3>
+                <dl>
+                    <dt>Name</dt>
+                    <dd>Nike Casuals</dd>
+                    <dt>Price</dt>
+                    <dd>6700.44</dd>
+                </dl>
+            </div>
+            <div class="tab-pane" id="preview">
+                <h3>Preview</h3>
+                <img src="./images/shoe.jpeg" width="200" height="200">
+            </div>
+            <div class="tab-pane" id="description">
+                <h3>Description</h3>
+                <p>something about nike casuals..</p>
+            </div>
+        </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

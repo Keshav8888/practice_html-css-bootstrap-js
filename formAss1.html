@@ -16,107 +16,10 @@
             scroll-behavior: smooth;
         }
 
-        /* Navbar */
-        .navbar {
-            position: fixed;
-            width: 100%;
-            background: #9ea173;
-            color: black;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: bold;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 50px;
-            padding-right: 100px;
-            /* z-index: 1000; */
-        }
-
-        .navbar h2 {
-            font-size: 22px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            color: black;
-            text-decoration: none;
-            font-size: 18px;
-            transition: 0.5s;
-        }
-
-        .nav-links a:hover {
-            color: #ffffff;
-        }
-
         /* Sections */
         section {
             padding: 100px 50px;
             min-height: 100vh;
-        }
-
-        /* Home Section */
-        #home {
-            background: url("./images/wedding.jpg") no-repeat center/cover;
-            color: white;
-        }
-
-        #home h1 {
-            font-size: 40px;
-            /* background: rgba(0, 0, 0, 0.5); */
-            /* padding: 20px; */
-            border-radius: 10px;
-            margin-left: 400px;
-            margin-top: 200px;
-        }
-
-        #home p {
-            margin-left: 550px;
-            color: rgb(178, 209, 86);
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        /* Specializations */
-        #specialization h2 {
-            text-align: center;
-            margin-bottom: -2px;
-            font-size: 30px;
-            color: red;
-        }
-
-        #specialization .para {
-            display: flex;
-            /* text-align: center;
-            align-items: center;  */
-            margin-left: 580px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            text-decoration: underline;
-        }
-
-        .specialization-points {
-            /* display: grid;
-            grid-template-columns: 3fr 3fr 3fr 3fr; */
-            gap: 20px;
-        }
-
-        .specialization-points div {
-            margin-bottom: 15px;
-            background: #c1b6b6;
-            padding: 20px;
-            border-radius: 10px;
-            color: black;
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
-        }
-
-        .specialization-points h3 {
-            margin-bottom: 10px;
-            color: #333;
         }
 
         /* Register Section */
@@ -185,59 +88,12 @@
         }
     </style>
 </head>
+</head>
 
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <h2>Matrimonial</h2>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#specialization">Specializations</a>
-            <a href="formAss1.html">Login</a>
-        </div>
-    </div>
-
-    <!-- Home Section -->
-    <section id="home">
-        <div>
-            <h1>Welcome to Keshav Matrimonial</h1>
-        </div>
-        <p>
-            Find your partner Here...
-        </p>
-    </section>
-
-    <!-- Specializations Section -->
-    <section id="specialization">
-        <h2>Our Specializations</h2>
-        <span class="para">We are specialized in following fields:</span>
-        <div class="specialization-points">
-            <div>
-                <h3>Late Marriages</h3>
-                <p>We do marriages of people age more than 35 years</p>
-            </div>
-            <div>
-                <h3>Early Marriages</h3>
-                <p>We do marriages of age 18 to 20 also</p>
-            </div>
-            <div>
-                <h3>More than 1 Marriages</h3>
-                <p>We do more than 1 marriages here also </p>
-            </div>
-            <div>
-                <h3>Dating cum Marriages</h3>
-                <p>Here we provides Dating first to get to know each other, and move towards marriage if things work
-                    out.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Register Section -->
-
-    <!-- This section will be used to open the Login form in the same page of the above data.To open the form in new page i have used formAss1.html file -->
-    <!-- <section id="login">
+    <section id="login">
         <h2>Register Yourself Here</h2>
-         <form action="thankyouAss1.html" method="get">
+        <form action="thankyouAss1.html" method="get">
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Enter your name" required>
 
@@ -298,8 +154,7 @@
 
             <button type="submit">Register</button>
         </form>
-    </section> -->
-
+    </section>
 </body>
 
 </html>

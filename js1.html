@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How javascript refers HTML elements in page</title>
+
+    <script>
+        // using DOM hierarchy
+        function bodyload(){
+            window.document.images[0].src="./images/shoe.jpeg";
+            window.document.images[0].height="200";
+            window.document.images[0].width="300";
+            window.document.forms[0].elements[0].value="Register";
+            window.document.forms[1].elements[1].value="Login";
+        }
+
+        // using name
+        // function bodyload(){
+        //     pic.src="./images/shoe.jpeg";
+        //     form1.regisBtn.value="Register";
+        //     form2.loginbtn.value="Login";
+        // }
+
+        // using ID
+        // function bodyload(){
+        //     document.getElementById("pic").src="./images/shoe.jpeg";
+        //     document.getElementById("regisBtn").value="Register";
+        //     document.getElementById("loginbtn").value="Login";
+        // }
+    </script>
+</head>
+<body onload="bodyload()">
+
+    <!-- 1. refer by using DOM hierarchy -->
+
+    <div>
+        <img width="100" height="100" border="1">
+    </div>
+    <div>
+        <form>
+            <h2>Register</h2>
+            <input type="button">
+            <input type="email">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            <input type="text">
+            <input type="button">
+        </form>
+    </div>
+
+    <!-- 2. refer by using name-->
+
+    <!-- <div>
+        <img name="pic" width="100" height="100" border="1">
+    </div>
+    <div>
+        <form name="form1">
+            <h2>Register</h2>
+            <input type="button" name="regisBtn">
+            <input type="email">
+        </form>
+    </div>
+    <div>
+        <form  name="form2">
+            <h2>Login</h2>
+            <input type="text">
+            <input type="button" name="loginbtn">
+        </form>
+    </div> -->
+
+    <!-- 3. refer by using ID -->
+
+    <!-- <div>
+        <img name="pic" id="pic" width="100" height="100" border="1">
+    </div>
+    <div>
+        <form name="form1">
+            <h2>Register</h2>
+            <input type="button" id="regisBtn" name="regisBtn">
+            <input type="email">
+        </form>
+    </div>
+    <div>
+        <form  name="form2">
+            <h2>Login</h2>
+            <input type="text">
+            <input type="button" id="loginbtn" name="loginbtn">
+        </form>
+    </div> -->
+</body>
+</html>

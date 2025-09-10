@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How javascript refers HTML elements in page</title>
 
     <script>
-        // using DOM hierarchy
+        // 1. using DOM hierarchy
         function bodyload(){
             window.document.images[0].src="./images/shoe.jpeg";
             window.document.images[0].height="200";
@@ -15,21 +16,29 @@
             window.document.forms[1].elements[1].value="Login";
         }
 
-        // using name
+        // 2. using name
         // function bodyload(){
         //     pic.src="./images/shoe.jpeg";
         //     form1.regisBtn.value="Register";
         //     form2.loginbtn.value="Login";
         // }
 
-        // using ID
+        // 3. using ID
         // function bodyload(){
         //     document.getElementById("pic").src="./images/shoe.jpeg";
         //     document.getElementById("regisBtn").value="Register";
         //     document.getElementById("loginbtn").value="Login";
         // }
+
+        // 4. using CSS selectors
+        // function bodyload() {
+        //     document.querySelector("img").src = "./images/laptop.jpg";
+        //     document.querySelector("#btnRegister").value="Register";
+        //     document.querySelector(".btnLogin").value="Login";
+        // }
     </script>
 </head>
+
 <body onload="bodyload()">
 
     <!-- 1. refer by using DOM hierarchy -->
@@ -91,5 +100,27 @@
             <input type="button" id="loginbtn" name="loginbtn">
         </form>
     </div> -->
+
+    <!-- 4. refer by using CSS selectors -->
+
+    <!-- <div>
+        <img width="100" id="pic" name="pic" height="100" border="1">
+    </div>
+    <div>
+        <form>
+            <h2>Register</h2>
+            <input type="email">
+            <input type="button" id="btnRegister" name="btnRegister">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h2>Login</h2>
+            <input type="text">
+            <input type="button" class="btnLogin" name="btnLogin">
+        </form>
+    </div> -->
+
 </body>
+
 </html>

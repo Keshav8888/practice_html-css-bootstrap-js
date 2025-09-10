@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output Techniques</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        // 1. alert()
+        function Delete(){
+            alert("Deleted record");
+        }
+
+        // 2. confirm()
+        function DeleteMe(){
+            var flag = confirm("Delete record");
+            if(flag==true){
+                alert("Record deleted successfully!!");
+            }
+            else{
+                alert("You cancelled!!");
+            }
+        }
+
+        // 3. document.write()
+        function Yesclick(){
+            document.write("<b><i>Record deleted successfully!!<i><b>");
+        }
+        function Noclick(){
+            document.write("You cancelled!!");
+        }
+
+    </script>
+</head>
+<body class="container-fluid">
+    <!-- 1. alert() -->
+    <button onclick="Delete()">Delete</button>
+
+    <!-- 2. confirm() -->
+    <button onclick="DeleteMe()">Click here</button>
+
+    <!-- 3. document.write() -->
+    <div class="mt-2">
+        <button class="btn btn-danger" data-bs-target="#delete" data-bs-toggle="modal">Delete</button>
+        <div class="modal fade" id="delete">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Delete record</h2>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Yesclick()" class="btn btn-success">Yes</button>
+                        <button onclick="Noclick()" class="btn btn-danger">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,31 +11,47 @@
 
     <script>
         // 1. alert()
-        function Delete(){
+        function Delete() {
             alert("Deleted record");
         }
 
         // 2. confirm()
-        function DeleteMe(){
+        function DeleteMe() {
             var flag = confirm("Delete record");
-            if(flag==true){
+            if (flag == true) {
                 alert("Record deleted successfully!!");
             }
-            else{
+            else {
                 alert("You cancelled!!");
             }
         }
 
         // 3. document.write()
-        function Yesclick(){
-            document.write("<b><i>Record deleted successfully!!<i><b>");
-        }
-        function Noclick(){
-            document.write("You cancelled!!");
-        }
+        // function Yesclick() {
+        //     document.write("<b><i>Record deleted successfully!!<i><b>");
+        // }
+        // function Noclick() {
+        //     document.write("You cancelled!!");
+        // }
 
+        // 5. InnerHTML, 6. Innertext
+        // function Yesclick() {
+        //     document.getElementById("msg").innerHTML = "<b><i>Record deleted successfully!!<i><b>";
+        // }
+        // function Noclick() {
+        //     document.getElementById("msg").innerText = "<b><i>You cancelled!!</b></i>";
+        // }
+
+        // 7. OuterHTML
+        function Yesclick() {
+            document.getElementById("msg").outerHTML = "<h2>Record deleted successfully!!</h2>"
+        }
+        function Noclick() {
+            document.getElementById("msg").innerText = "<b><i>You cancelled!!</b></i>";
+        }
     </script>
 </head>
+
 <body class="container-fluid">
     <!-- 1. alert() -->
     <button onclick="Delete()">Delete</button>
@@ -64,7 +81,74 @@
         </div>
     </div>
 
+    <!-- 4. Console Methods -->
+    <!-- Console is a tool provided in every browser.
+        Open it by,Inspect on the browser page and then go to "console".
+        Console.log(), Console.error(), Console.warn(), Console.debug(), Console.info()
+        Syntax: 
+        Console.log("Message");
+        Console.error("Message");
+    -->
+
+    <!-- 5. InnerHTML, 6. Innertext -->
+    <!-- InnerHTML allows markup. 
+        InnerText is RC data type(markup not allowed)
+    -->
+    <div class="mt-2">
+        <button class="btn btn-danger" data-bs-target="#delete" data-bs-toggle="modal">Delete</button>
+        <div class="modal fade" id="delete">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Delete Record</h2>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure to delete?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Yesclick()" data-bs-dismiss="modal" class="btn btn-primary">Yes</button>
+                        <button onclick="Noclick()" data-bs-dismiss="modal" class="btn btn-danger">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2">
+        <p id="msg"></p>
+    </div>
+
+    <!-- 7. OuterHTML -->
+    <!-- InnerHTML can display the markup in the existing markup.
+        It keeps the parent container and adds markup as child.
+        OuterHTML can replace the markup.
+    -->
+    <div class="mt-2">
+        <button class="btn btn-danger" data-bs-target="#delete" data-bs-toggle="modal">Delete</button>
+        <div class="modal fade" id="delete">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Delete Record</h2>
+                        <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure to delete?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="Yesclick()" data-bs-dismiss="modal" class="btn btn-primary">Yes</button>
+                        <button onclick="Noclick()" data-bs-dismiss="modal" class="btn btn-danger">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-2">
+        <p id="msg"></p>
+    </div>
+
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+
+    <script>
+        // using (1)parseInt() 
+        function calculateClick() {
+            var age = document.getElementById("Age").value;
+            // document.getElementById("msg").innerHTML=(age+1); here parseInt() is not used so it will concatenate the two values
+            document.getElementById("msg").innerHTML=(parseInt(age)+1); //here with parseInt() age which is a string by default, will be converted in number and then addition
+        }
+
+        // using (2)parseFloat()
+        // function calculateClick() {
+        //     var age = document.getElementById("Age").value;
+        //     // document.getElementById("msg").innerHTML=(age+1); here parseFloat() is not used so it will concatenate the two values
+        //     document.getElementById("msg").innerHTML=(parseFloat(age)+1); //here with parseFloat() age which is a string by default, will be converted in float and then addition
+        // }
+    </script>
+</head>
+
+<body>
+    <!-- <script>
+        document.write(Number.MAX_SAFE_INTEGER+"<br>"+ Number.MIN_SAFE_INTEGER)
+        // used to print the maximum and minimum range of number
+    </script> -->
+
+    <!-- 1. Primitive types  -->
+    <!-- number -->
+    <!-- For HTML element,value is string by default.So,you have to explicitely convert it into number by using (1)parseInt()  (2)parseFloat() -->
+
+    <!-- using (1)parseInt() -->
+    Age:<input type="number" id="Age" min="15" max="30">
+    <button onclick="calculateClick()">Calculate</button>
+    <span id="msg"></span>
+
+    <!-- using (2)parseFloat() -->
+    <!-- Age:<input type="number" id="Age" step="0.1" min="15" max="30">
+    <button onclick="calculateClick()">Calculate</button>
+    <span id="msg"></span> -->
+</body>
+
+</html>

@@ -7,19 +7,32 @@
     <title>Data Types</title>
 
     <script>
-        // using (1)parseInt() 
-        function calculateClick() {
-            var age = document.getElementById("Age").value;
-            // document.getElementById("msg").innerHTML=(age+1); here parseInt() is not used so it will concatenate the two values
-            document.getElementById("msg").innerHTML=(parseInt(age)+1); //here with parseInt() age which is a string by default, will be converted in number and then addition
-        }
+        // using (i)parseInt() 
+        // function calculateClick() {
+        //     var age = document.getElementById("Age").value;
+        //     // document.getElementById("msg").innerHTML=(age+1); here parseInt() is not used so it will concatenate the two values
+        //     document.getElementById("msg").innerHTML=(parseInt(age)+1); //here with parseInt() age which is a string by default, will be converted in number and then addition
+        // }
 
-        // using (2)parseFloat()
+        // using (ii)parseFloat()
         // function calculateClick() {
         //     var age = document.getElementById("Age").value;
         //     // document.getElementById("msg").innerHTML=(age+1); here parseFloat() is not used so it will concatenate the two values
         //     document.getElementById("msg").innerHTML=(parseFloat(age)+1); //here with parseFloat() age which is a string by default, will be converted in float and then addition
         // }
+
+        // using isNaN()
+        function CalculateClick(){
+            var age=document.getElementById("Age").value;
+            var msg=document.getElementById("msg");
+
+            if(isNaN(age)){
+                msg.innerHTML="Please enter a number:"; //if the input type is not number then isNaN() returns true and prints the code inside it
+            }
+            else{
+                msg.innerHTML="Your age is:"+age;
+            }
+        }
     </script>
 </head>
 
@@ -29,19 +42,27 @@
         // used to print the maximum and minimum range of number
     </script> -->
 
-    <!-- 1. Primitive types  -->
-    <!-- number -->
-    <!-- For HTML element,value is string by default.So,you have to explicitely convert it into number by using (1)parseInt()  (2)parseFloat() -->
+    <!--  Primitive data types  -->
+    <!-- 1. Number -->
+    <!-- For HTML element,value is string by default.So,you have to explicitely convert it into number by using (i)parseInt()  (ii)parseFloat() -->
 
-    <!-- using (1)parseInt() -->
-    Age:<input type="number" id="Age" min="15" max="30">
+    <!-- using (i)parseInt() -->
+    <!-- Age:<input type="number" id="Age" min="15" max="30">
     <button onclick="calculateClick()">Calculate</button>
-    <span id="msg"></span>
+    <span id="msg"></span> -->
 
-    <!-- using (2)parseFloat() -->
+    <!-- using (ii)parseFloat() -->
     <!-- Age:<input type="number" id="Age" step="0.1" min="15" max="30">
     <button onclick="calculateClick()">Calculate</button>
     <span id="msg"></span> -->
+
+    <!-- How to check the input type is number? -->
+    <!-- by using isNaN() -->
+    Age: <input type="text" id="Age">
+    <button onclick="CalculateClick()">Calculate</button>
+    <span id="msg"></span>
+
+
 </body>
 
 </html>

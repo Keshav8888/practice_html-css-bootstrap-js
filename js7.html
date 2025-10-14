@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+
+    <script>
+        // function VerifyUserName() {
+        //     var username = document.getElementById("UserName").value;
+        //     var password = document.getElementById("Password");
+        //     if (username == "") {
+        //         password.disabled = true;
+        //     } else {
+        //         password.disabled = false;
+        //     }
+        // }
+        // function VerifyPassword() {
+        //     var password = document.getElementById("Password").value;
+        //     if (password == "admin") {
+        //         document.getElementById("btnLogin").disabled = false;
+        //     } else {
+        //         document.getElementById("btnLogin").disabled = true;
+        //     }
+        // }
+        // function Login() {
+        //     var message = document.getElementById("message");
+        //     document.write("Login Successfully!");
+        // }
+
+        function VerifyUserName() {
+            var username = document.getElementById("UserName").value;
+            if (username == "") {
+                document.getElementById("passwordContainer").style.display = "none";
+            } else {
+                document.getElementById("passwordContainer").style.display = "block";
+            }
+        }
+        function VerifyPassword() {
+            var password = document.getElementById("Password").value;
+            if (password == "admin") {
+                document.getElementById("buttonContainer").style.display = "block";
+            } else {
+                document.getElementById("buttonContainer").style.display = "none";
+            }
+        }
+        function Login() {
+            var message = document.getElementById("message");
+            document.write("Login Successfully!");
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- 3. Boolean Types -->
+    <!-- Boolean types are used in decision making -->
+    <!-- Boolean type can handle only 2 values:true and false -->
+    <!-- Javascript boolean true can refer to 1 and false to 0 -->
+
+    <!-- <fieldset>
+        <legend>Login</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" onblur="VerifyUserName()" id="UserName"></dd>
+            <dt>Password</dt>
+            <dd><input type="password" onblur="VerifyPassword()" disabled id="Password"></dd>
+        </dl>
+        <button disabled onclick="Login()" id="btnLogin">Login</button>
+
+        <p id="message"></p>
+    </fieldset> -->
+
+    <fieldset>
+        <legend>Login</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" onblur="VerifyUserName()" id="UserName"></dd>
+            <div id="passwordContainer" style="display: none;">
+                <dt>Password</dt>
+                <dd><input type="password" onblur="VerifyPassword()" id="Password"></dd>
+            </div>
+        </dl>
+        <div id="buttonContainer" style="display: none;">
+            <button onclick="Login()" id="btnLogin">Login</button>
+        </div>
+
+        <p id="message"></p>
+    </fieldset>
+
+
+</body>
+
+</html>

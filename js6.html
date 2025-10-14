@@ -92,40 +92,50 @@
                 document.write("Invalid Input!!");
             }
         }
-        
+
+        // split()
+        // var contacts="John:6412194151,David:6793979730";
+        // var [john,david]=contacts.split(',');
+        // document.write(david);
+
+        // var contacts="John:6412194151,David:6793979730";
+        // var result=contacts.split(',');
+        // document.write(result[0]); //It will print John:6412194151 as it is in 0th index
+        // document.write(result[1]);  //It will print David:6793979730 as it is in 1st index
+
     </script>
 </head>
 
 <body class="container-fluid">
     <!-- 2. String -->
-    <!-- a. charAt() It returns the character at specific index -->
-    <!-- b. charcodeAt() It returns character code instead of char -->
+    <!--  charAt() It returns the character at specific index -->
+    <!--  charcodeAt() It returns character code instead of char -->
 
     <!-- User Name:
     <input type="text" onblur="VerifyUserName()" id="UserName">
     <div id="UserError"></div> -->
 
-    <!-- 3. slice() -->
+    <!--  slice() -->
     <!-- It can extract the chars between specified index. -->
     <!-- It uses start and end index -->
     <!-- End index must be a number after start index -->
     <!-- Syntax: slice(startIndex,endIndex) -->
 
-    <!-- 4. substr() -->
+    <!--  substr() -->
     <!-- It can extract specified number of chars from given index -->
     <!-- Syntax: substr(startIndex,howmanyChars)
       substr(0,7)
       substr(7,3) 
     -->
 
-    <!-- 5. substring() -->
+    <!--  substring() -->
     <!-- It can read only the chars from specified index to either directions[start or end] -->
     <!-- Syntax: substring(startIndex,noOfChars)
       substring(7) 7 to end
       substring(7,0) 7 to start
     -->
 
-    <!-- 6. startswith() -->
+    <!--  startswith() -->
     <!-- It returns true if string is starting with specified char(s) -->
 
     <!-- <h2>Verify-Card</h2>
@@ -136,7 +146,7 @@
         </span>
     </div> -->
 
-    <!-- 7. endswith() -->
+    <!-- endswith() -->
     <!-- It returns true if string is ending with specified char(s) -->
 
     <!-- <h2>Verify Gmail</h2>
@@ -145,7 +155,7 @@
         <div id="error"></div>
     </div> -->
 
-    <!-- 8. match() -->
+    <!-- match() -->
     <!-- It is used to verify a string against a pattern.In javascript pattern is a regular expression enclosed in "/ /" -->
 
     <!-- length -->
@@ -164,7 +174,7 @@
         </div>
     </fieldset> -->
 
-    <!-- 10. indexOf() -->
+    <!--  indexOf() -->
     <!-- It returns the index number of specified char.If char not found it returns -1 -->
 
     <!-- lastIndexOf() -->
@@ -176,7 +186,7 @@
         <div id="error"></div>
     </fieldset> -->
 
-    <!-- 11. trim() -->
+    <!--  trim() -->
     <!-- It is used to remove the leading spaces in string [spaces before and after the string] -->
 
     <fieldset>
@@ -184,6 +194,12 @@
         <input type="text" id="password">
         <button onclick="VerifyPassword()">Submit</button>
     </fieldset>
+
+    <!--  split() -->
+     <!-- It returns the string into multiple strings -->
+      <!-- It can split by referring to any delimeter[seperator] -->
+
+
 
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>

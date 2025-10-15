@@ -7,6 +7,9 @@
     <title>Data Types</title>
 
     <script>
+
+        // Boolean Types
+        // boolean(1) 
         // function VerifyUserName() {
         //     var username = document.getElementById("UserName").value;
         //     var password = document.getElementById("Password");
@@ -29,25 +32,50 @@
         //     document.write("Login Successfully!");
         // }
 
-        function VerifyUserName() {
-            var username = document.getElementById("UserName").value;
-            if (username == "") {
-                document.getElementById("passwordContainer").style.display = "none";
-            } else {
-                document.getElementById("passwordContainer").style.display = "block";
-            }
-        }
-        function VerifyPassword() {
-            var password = document.getElementById("Password").value;
-            if (password == "admin") {
-                document.getElementById("buttonContainer").style.display = "block";
-            } else {
-                document.getElementById("buttonContainer").style.display = "none";
-            }
-        }
-        function Login() {
-            var message = document.getElementById("message");
-            document.write("Login Successfully!");
+        //  boolean(2)
+        // function VerifyUserName() {
+        //     var username = document.getElementById("UserName").value;
+        //     if (username == "") {
+        //         document.getElementById("passwordContainer").style.display = "none";
+        //     } else {
+        //         document.getElementById("passwordContainer").style.display = "block";
+        //     }
+        // }
+        // function VerifyPassword() {
+        //     var password = document.getElementById("Password").value;
+        //     if (password == "admin") {
+        //         document.getElementById("buttonContainer").style.display = "block";
+        //     } else {
+        //         document.getElementById("buttonContainer").style.display = "none";
+        //     }
+        // }
+        // function Login() {
+        //     var message = document.getElementById("message");
+        //     document.write("Login Successfully!");
+        // }
+
+        // Undefined Type
+        // var name="Samsung TV";
+        // var price; //if will execute
+        // // var price=3000; //else will execute
+        // if(price==undefined){
+        //     document.write(`Name=${name}`);
+        // }else{
+        //     document.write(`Name=${name}<br>Price=${price}`)
+        // }
+
+        // var x;
+        // document.write("x="+x); //x= undefined
+        // document.write("y="+y); //y is not defined(as error)
+
+        // Null Type
+        var username=prompt("Enter Name:");
+        if(username==null){
+            document.write("You cancelled!!");
+        }else if(username==""){
+            document.write("Please provide user name");
+        }else{
+            document.writeln("Hello!!"+username);
         }
 
     </script>
@@ -59,6 +87,7 @@
     <!-- Boolean type can handle only 2 values:true and false -->
     <!-- Javascript boolean true can refer to 1 and false to 0 -->
 
+    <!-- boolean(1) -->
     <!-- <fieldset>
         <legend>Login</legend>
         <dl>
@@ -72,7 +101,8 @@
         <p id="message"></p>
     </fieldset> -->
 
-    <fieldset>
+    <!-- boolean(2) -->
+    <!-- <fieldset>
         <legend>Login</legend>
         <dl>
             <dt>User Name</dt>
@@ -87,7 +117,16 @@
         </div>
 
         <p id="message"></p>
-    </fieldset>
+    </fieldset> -->
+
+    <!-- 4. Undefined Type -->
+    <!-- Undefined type indicates that value is not defined into a variable or reference -->
+    <!-- You can use "undefined" keyword to verify value defined or not -->
+
+    <!-- 5. Null Type -->
+    <!-- Null defines that value is not supplied during run time -->
+    <!-- Null is no value -->
+
 
 
 </body>

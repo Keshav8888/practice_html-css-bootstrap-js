@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script>
+
+        // Array
+        // var categories = [];
+        // categories["0"] = "Electronics";
+        // categories[1] = 10;
+        // categories["2"] = true;
+        // for (var property in categories) {
+        //     document.write(`[${property}]-${typeof property}: ${categories[property]}(${typeof categories[property]})<br>`);
+        // }
+
+        //Types of values to be stored in array
+        // var values=[10,"John",true,["Mumbai","Delhi"],function(){document.write("function in array")}];
+        // document.write(values[3][0]+"<br>"); //[3][0]: [3] means element at index 3 in array that is ["Mumbai","Delhi"], and [0] means element at index 0 in the sub-array ["Mumbai","Delhi"] that is Mumbai
+        // values[4](); //accesses the function stored at index 4
+
+        // Array destruction
+        // var values = [10, "John", true, ["Mumbai", "delhi"], function () { document.write("function in array") }];
+        // var [id, name, stock, cities, print] = values;
+        // document.write(stock + "<br>");
+        // print();
+
+        // Reading values from Array:
+        // 1. property name
+        // var categories = ["Electronics", "Footwear"];
+        // document.write(categories["1"]);
+
+        // 2. toString()
+        // var categories = ["Electronics", "Footwear","Fashion"];
+        // document.write(categories.toString());
+
+        // 3. join()
+        // var categories = ["Electronics", "Footwear", "Fashion"];
+        // document.write(categories.join("/"));
+
+        // 4. map()
+        // var categories = ["Electronics", "Footwear", "Fashion"];
+        // categories.map(function (category) {
+        //     document.write(`<h2>${categories}</h2>`)
+        // })
+
+        // 5. for..in
+        // var categories = ["Electronics", "Footwear", "Fashion"];
+        // for (var property in categories) {
+        //     document.write(property + "<br>");
+        // }
+
+        // 6. for..of
+        // var categories = ["Electronics", "Footwear", "Fashion"];
+        // for (var value of categories) {
+        //     document.write(value + "<br>");
+        // }
+
+        // 7. both properties and values by using for..in
+        // var categories = ["Electronics", "Footwear", "Fashion"];
+        // for (var property in categories) {
+        //     document.write(`[${property}]: ${categories[property]}<br>`);
+        // }
+
+        // 8. find()
+        // var sales = [40000, 41000, 42000, 43000, 44000, 45000];
+        // var result = sales.find(function (value) {
+        //     return value <= 42000;
+        // });
+        // document.write(result);
+
+        // 9. filter()
+        // var sales = [40000, 41000, 42000, 43000, 44000, 45000];
+        // var result = sales.filter(function (value) {
+        //     return value >= 42000;
+        // });
+        // document.write(result);
+
+        // 10. for loop
+        var sales = [40000, 41000, 42000, 43000, 44000, 45000];
+        for(var i=0;i<sales.length;i++){
+            document.write(sales[i]+"<br>");
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <!-- Non-Primitive types -->
+    <!-- These are mutable types -->
+    <!-- Their structure can change dynamically according to the state and situation -->
+    <!-- They don't have any fixed ranged for value -->
+    <!-- Value range will change according to memeory available -->
+    <!-- JavaScript non-primitive types are: (1)Array, (2)Object, (3)Map -->
+
+    <!-- (1). Array -->
+    <!-- Arrays are used in computer programming to reduce overhead and complexity -->
+    <!-- Arrays can reduce overhead by storing values in sequential order -->
+    <!-- Arrays can reduce complexity by storing multiple values under one name -->
+    <!-- Arrays can store various types of values -->
+    <!-- Arrays size can change dynamically -->
+
+    <!-- Storing values in Array -->
+    <!-- Array comprises of index and property -->
+    <!-- Data is stored in the reference of memory index -->
+    <!-- Data is accessed by using property reference -->
+    <!-- Property name will be same as index -->
+    <!-- Property type is string -->
+
+    <!-- We can store "Primitive", "non-Primitive" and "function" types of values in an array-->
+
+    <!-- Array destruction -->
+    <!-- It is a technique used to extract values from array and store in various references -->
+
+    <!-- Reading values from Array: -->
+    <!-- 1. You can read by using "property name" -->
+    <!-- 2. You can use "toString()" which returns all elements seperated by delimeter", " -->
+    <!-- 3. You can use "join()" which used custom delimeter -->
+    <!-- 4. You can read by using "map()",it is an iterator that reads every element from array and presents in the UI -->
+    <!-- 5. You can read by using "for..in" statement,which returns all properties -->
+    <!-- 6. You can read all values by using "for..of" -->
+    <!-- 7. You can read "both properties and values by using for..in" -->
+    <!-- 8. You can use "find()" method, which can search and return only the value that matches your condition.It returns single value -->
+    <!-- 9. You can use "filter()" method, which returns all values that match the given condition -->
+    <!-- 10. You can use "for loop" for reading values -->
+
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Types</title>
+    <title>Non-Primitive Data Types- Array</title>
     <script>
 
         // Array
@@ -79,16 +79,186 @@
         // document.write(result);
 
         // 10. for loop
-        var sales = [40000, 41000, 42000, 43000, 44000, 45000];
-        for(var i=0;i<sales.length;i++){
-            document.write(sales[i]+"<br>");
+        // var sales = [40000, 41000, 42000, 43000, 44000, 45000];
+        // for(var i=0;i<sales.length;i++){
+        //     document.write(sales[i]+"<br>");
+        // }
+
+        // presenting buttons with map
+        // var categories=["Electronics","Footwear","Fashion"];
+        // categories.map(function(category){
+        //     document.write(`<button>${category}</button>`);
+        // })
+
+        // presenting images
+        // var products = ["./images/backpack.webp", "./images/sneaker.webp", "./images/speaker.jpeg"];
+        // products.map(function (path) {
+        //     document.write(`<div><img src=${path} width="100" height="100"></div>`);
+        // })
+
+        // appendchild()
+        // function CreateClick(){
+        //     var pic=document.createElement("img");
+        //     pic.width="100";
+        //     pic.height="100";
+        //     pic.border="1";
+        //     pic.src="./images/backpack.webp";
+        //     pic.style.marginTop="50px";
+        //     document.getElementById("container").appendChild(pic);
+        // }
+
+        //  Presenting array content Dynamically
+        // var categories = ["All", "Electronics", "Footwear", "Fashion", "Men's Clothing"];
+        // function bodyload() {
+        //     for (var item of categories) {
+        //         var li = document.createElement("li");
+        //         li.innerHTML = item;
+        //         document.querySelector("ol").appendChild(li);
+
+        //         var option = document.createElement("option");
+        //         option.text = item;
+        //         option.value = item;
+
+        //         document.querySelector("select").appendChild(option);
+
+
+        //         var tr = document.createElement("tr");
+        //         var td = document.createElement("td");
+        //         td.innerHTML = item;
+        //         tr.appendChild(td);
+
+        //         document.querySelector("tbody").appendChild(tr);
+
+        //         var checkLi = document.createElement("li");
+        //         checkLi.innerHTML = `<input type="checkbox"> ${item}</input>`;
+
+        //         document.querySelector("ul").appendChild(checkLi);
+
+        //         var div = document.createElement("div");
+        //         div.innerHTML = `<button style="width:200px; margin-top:20px">${item}</button>`;
+
+        //         document.querySelector("nav").appendChild(div);
+
+        //     }
+        // }
+
+        // Array manipulations
+        // var categories = ["All", "Electronics", "Footwear", "Fashion", "Men's Clothing"];
+        // function LoadCategories() {
+        //     document.querySelector("ol").innerHTML = "";
+        //     document.querySelector("select").innerHTML = "";
+        //     document.querySelector("tbody").innerHTML = "";
+        //     document.querySelector("ul").innerHTML = "";
+        //     document.querySelector("nav").innerHTML = "";
+
+        //     for (var item of categories) {
+        //         var li = document.createElement("li");
+        //         li.innerHTML = item;
+
+        //         document.querySelector("ol").appendChild(li);
+        //         var option = document.createElement("option");
+        //         option.text = item;
+        //         option.value = item;
+
+        //         document.querySelector("select").appendChild(option);
+
+        //         var tr = document.createElement("tr");
+        //         var td = document.createElement("td");
+        //         td.innerHTML = item;
+        //         tr.appendChild(td);
+
+        //         document.querySelector("tbody").appendChild(tr);
+
+        //         var checkLi = document.createElement("li");
+        //         checkLi.innerHTML = `<input type="checkbox"> ${item}`;
+
+        //         document.querySelector("ul").appendChild(checkLi);
+
+        //         var div = document.createElement("div");
+        //         div.innerHTML = `<button style="width:200px; margin-top:20px"> ${item}`;
+
+        //         document.querySelector("nav").appendChild(div);
+        //     }
+        // }
+
+        // function bodyload() {
+        //     LoadCategories();
+        // }
+
+        // function AddClick() {
+        //     var categoryname = document.getElementById("txtCategory").value;
+
+        //     if (categories.indexOf(categoryname) == -1) {
+        //         categories.push(categoryname);
+        //         alert(`${categoryname} Add to list`);
+        //         LoadCategories();
+        //         document.getElementById("txtCategory").value = "";
+        //     } else {
+        //         alert(`${categoryname} Exists`);
+        //     }
+        // }
+
+        // function RemoveClick() {
+        //     var categoryname = document.querySelector("select").value;
+        //     var index = categories.indexOf(categoryname);
+        //     var flag = confirm(`Are you sure you want to delete: ${categoryname}`);
+        //     if (flag == true) {
+        //         categories.splice(index, 1);
+        //         LoadCategories();
+        //     }
+        // }
+
+        // Sorting Array
+        var cities=["Delhi","Hyd","Mumbai","Chennai","Noida"];
+        cities.sort();
+        cities.reverse();
+        for(var item of cities){
+            document.write(item+"<br>");
         }
 
 
     </script>
+
+    <style>
+        /* Presenting array content Dynamically */
+        /* .container {
+            display: flex;
+        }
+
+        .box {
+            margin-right: 20px;
+        }
+
+        ul {
+            list-style: none;
+            height: 50px;
+            border: 2px solid black;
+            padding: 10px;
+            overflow: auto;
+        } */
+
+        /* Array manipulations */
+        /*.container {
+            display: flex;
+        }
+
+        .box {
+            margin-right: 20px;
+        }
+
+        ul {
+            list-style: none;
+            height: 50px;
+            border: 2px solid black;
+            padding: 10px;
+            overflow: auto;
+        } */
+        
+    </style>
+
 </head>
 
-<body>
+<body onload="bodyload()">
 
     <!-- Non-Primitive types -->
     <!-- These are mutable types -->
@@ -127,6 +297,131 @@
     <!-- 8. You can use "find()" method, which can search and return only the value that matches your condition.It returns single value -->
     <!-- 9. You can use "filter()" method, which returns all values that match the given condition -->
     <!-- 10. You can use "for loop" for reading values -->
+
+    <!-- How to create a new HTML element dynamically -->
+    <!-- By using the method: -->
+    <!-- document.createElement("name"); -->
+    <!-- document.createElement("img"); -->
+    <!-- document.createElement("p"); -->
+
+    <!-- How to configure element -->
+    <!-- var img=document.createElement("img");
+    img.width="200";
+    img.height="100";
+    img.src="./images/backpack.webp"; -->
+
+    <!-- How to add new element into page -->
+    <!-- By using method "appendchild()" -->
+
+    <!-- <div>
+        <button onclick="CreateClick()">Create Image</button>
+    </div>
+    <div id="container"></div> -->
+
+    <!-- Presenting array content Dynamically -->
+    <!-- <div class="container">
+        <div class="box">
+            <h3>Categories List</h3>
+            <ol>
+
+            </ol>
+        </div>
+        <div class="box">
+            <h3>Select Category</h3>
+            <select>
+
+            </select>
+        </div>
+        <div class="box">
+            <h3>Categories Menu</h3>
+            <table border="1" width="200">
+                <thead>
+                    <tr>
+                        <th>Select Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="box">
+            <h3>Categories CheckList</h3>
+            <ul>
+
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Nav Buttons</h3>
+            <nav>
+
+            </nav>
+        </div>
+    </div> -->
+
+    <!-- Array manipulations -->
+    <!-- 1. Adding elements into array -->
+    <!-- push(): It will add new items as last item
+        unshift(): It will add new items as first item
+        splice(): It will add new items at specific position
+    -->
+    <!-- 2. Removing elements from array -->
+    <!-- pop(): Removes and returns last item
+        shift(): Removes and returns first item
+        splice(): Removes specific item
+    -->
+
+    <!-- <div style="margin-bottom: 20px;">
+        New Category:
+        <input type="text" id="txtCategory">
+        <button onclick="AddClick()">Add</button>
+    </div>
+    <div class="container">
+        <div class="box">
+            <h3>Categories List</h3>
+            <ol>
+
+            </ol>
+        </div>
+        <div class="box">
+            <h3>Select Category</h3>
+            <select>
+
+            </select>
+            <br><br>
+            <button onclick="RemoveClick()">Remove</button>
+        </div>
+        <div class="box">
+            <h3>Categories Menu</h3>
+            <table border="1" width="200">
+                <thead>
+                    <tr>
+                        <th>Select Category</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="box">
+            <h3>Categories CheckList</h3>
+            <ul>
+
+            </ul>
+        </div>
+        <div class="box">
+            <h3>Nav Buttons</h3>
+            <nav>
+
+            </nav>
+        </div>
+    </div> -->
+
+    <!-- Sorting Array -->
+    <!-- sort(): It arranges in ascending order -->
+    <!-- reverse(): It arranges in reverse order[bottom to top] -->
+
 
 </body>
 

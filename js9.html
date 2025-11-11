@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Primitive Data Types- Objects</title>
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        function GetClick(){
+            document.getElementById("detailsContainer").style.display="block";
+            fetch("../data/product.json")
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(product){
+                document.getElementById("lblName").innerHTML=product.Name;
+                document.getElementById("lblPrice").innerHTML=product.Price;
+                document.getElementById("productImg").src=product.Photo;
+                document.getElementById("lblStock").innerHTML=(product.Stock==true)?"Available":"Out of Stock";
+            })
+
+        }
+
+
+    </script>
+</head>
+
+<body class="container-fluid">
+    <!-- (2). Object -->
+    <!-- In computer programming Object is used to store similar type of data and logic together-->
+    <!-- It represents a pseudo class -->
+
+    <!-- Data is stored in properties and functionality in function-->
+    <!-- Syntax:
+        var object={
+        property:value;
+        property:value;
+        action:function()
+        }
+    -->
+
+    <!-- An object is a collection of "key-value" pairs, where keys are string type and value can be any type -->
+    <!-- Syntax:
+        var object={
+        "key": value
+        } 
+    -->
+
+    <!-- You can access outside object by using object name -->
+    <!-- object.key -->
+
+    <!-- You can access inside object by using "this" -->
+    <!-- this.key -->
+
+    <!-- If object comprises of only data then it is referred as "JSON"(JavaScript Object Notation) -->
+    <!-- Example:
+        var product={
+            "Name": "Samsung TV",
+            "Price":45000,
+            "Stock":true
+        }
+    document.write(`Name=${product.Name}<br>Price=${product.Price}<br>Stock=${product.Stock}`); -->
+
+    <div class="mt-2">
+        <button onclick="GetClick()" class="btn btn-primary">Get Product</button>
+    </div>
+    <div id="detailsContainer" style="display: none;">
+        <h3>Product Details</h3>
+        <dl>
+            <dt>Name</dt>
+            <dd id="lblName"></dd>
+            <dt>Price</dt>
+            <dd id="lblPrice"></dd>
+            <dt>Preview</dt>
+            <dd>
+                <img id="productImg" width="200" height="200">
+            </dd>
+            <dt>Stock</dt>
+            <dd id="lblStock"></dd>
+        </dl>
+    </div>
+
+
+
+</body>
+
+</html>

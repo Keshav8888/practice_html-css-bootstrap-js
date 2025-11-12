@@ -5,29 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Non-Primitive Data Types- Objects</title>
-<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
 
     <script>
-        function GetClick(){
-            document.getElementById("detailsContainer").style.display="block";
-            fetch("../data/product.json")
-            .then(function(response){
-                return response.json();
-            })
-            .then(function(product){
-                document.getElementById("lblName").innerHTML=product.Name;
-                document.getElementById("lblPrice").innerHTML=product.Price;
-                document.getElementById("productImg").src=product.Photo;
-                document.getElementById("lblStock").innerHTML=(product.Stock==true)?"Available":"Out of Stock";
-            })
 
+        // fetching data from product.json file(inside data folder) and displaying by clicking on "Get Product" button
+        // function GetClick() {
+        //     document.getElementById("detailsContainer").style.display = "block";
+        //     fetch("../data/product.json")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (product) {
+        //             document.getElementById("lblName").innerHTML = product.Name;
+        //             document.getElementById("lblPrice").innerHTML = product.Price;
+        //             document.getElementById("productImg").src = product.Photo;
+        //             document.getElementById("lblStock").innerHTML = (product.Stock == true) ? "Available" : "Out of Stock";
+        //         })
+
+        // }
+
+        // fetching data from fakestoreapi.com/products and displaying it
+        // function LoadProduct(id) {
+        //     fetch(`https://fakestoreapi.com/products/${id}`)
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (data) {
+        //             document.getElementById("img").src = data.image;
+        //             document.getElementById("title").innerHTML = data.title;
+        //             document.getElementById("price").innerHTML = data.price;
+        //             document.getElementById("description").innerHTML = data.description;
+        //         })
+        // }
+        // function bodyload() {
+        //     LoadProduct(1);
+        // }
+        // var productId = 1;
+        // function NextClick() {
+        //     productId++;
+        //     LoadProduct(productId);
+        // }
+        // function PreviousClick() {
+        //     productId--;
+        //     LoadProduct(productId);
+        // }
+
+        // Object with Functions
+        var product = {
+            "Name": "",
+            "Price": 0,
+            "Quantity": 0,
+            "Total": function () {
+                return this.Quantity * this.Price;
+            },
+            "Print": function () {
+                document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Quantity=${this.Quantity}<br>Total=${this.Total()}`);
+            }
         }
-
+        product.Name = prompt("Enter Name:");
+        product.Price = parseFloat(prompt("Enter Price:"));
+        product.Quantity = parseInt(prompt("Enter Quantity:"));
+        product.Print();
 
     </script>
 </head>
 
-<body class="container-fluid">
+<body onload="bodyload()" class="container-fluid">
     <!-- (2). Object -->
     <!-- In computer programming Object is used to store similar type of data and logic together-->
     <!-- It represents a pseudo class -->
@@ -63,7 +107,8 @@
         }
     document.write(`Name=${product.Name}<br>Price=${product.Price}<br>Stock=${product.Stock}`); -->
 
-    <div class="mt-2">
+    <!-- fetching data from product.json file(inside data folder) and displaying by clicking on "Get Product" button -->
+    <!-- <div class="mt-2">
         <button onclick="GetClick()" class="btn btn-primary">Get Product</button>
     </div>
     <div id="detailsContainer" style="display: none;">
@@ -80,7 +125,35 @@
             <dt>Stock</dt>
             <dd id="lblStock"></dd>
         </dl>
-    </div>
+    </div> -->
+
+    <!-- fetching data from fakestoreapi.com/products and displaying it   -->
+    <!-- <div class="card mt-3 p-2" style="width: 300px;">
+        <img id="img" height="170" class="card-img-top">
+        <div class="card-header" style="height: 160px;">
+            <p id="title"></p>
+        </div>
+        <div class="card-body">
+            <p id="price"></p>
+            <p id="description"></p>
+        </div>
+        <div class="card-footer">
+            <button onclick="PreviousClick()">Previous</button>
+            <button onclick="NextClick()">Next</button>
+        </div>
+    </div> -->
+
+
+    <!-- Object with Functions -->
+    <!-- Data is stored in properties
+        Functionality is defined in functions
+    -->
+    <!-- Object with functions and data is considered as a "Pseudo class".
+        Class is a template with sample data and logic, which you can implement with your requirements.
+    -->
+
+    <!-- Array of Objects -->
+     <!-- Data with multiple objects is reffered as "Array of Objects" -->
 
 
 

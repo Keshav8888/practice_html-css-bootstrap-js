@@ -1,0 +1,17 @@
+[
+{
+    "Name":"Winter Jacket",
+    "Price":4000,
+    "Photo":"./images/jacket.jpg"
+},
+{
+    "Name":"Speaker",
+    "Price":1000,
+    "Photo":"./images/speaker.jpeg"
+},
+{
+    "Name":"Nike Casuals",
+    "Price":2000,
+    "Photo":"./images/shoe.jpeg"
+}
+]

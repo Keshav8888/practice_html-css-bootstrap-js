@@ -52,21 +52,71 @@
         // }
 
         // Object with Functions
-        var product = {
-            "Name": "",
-            "Price": 0,
-            "Quantity": 0,
-            "Total": function () {
-                return this.Quantity * this.Price;
-            },
-            "Print": function () {
-                document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Quantity=${this.Quantity}<br>Total=${this.Total()}`);
-            }
+        // var product = {
+        //     "Name": "",
+        //     "Price": 0,
+        //     "Quantity": 0,
+        //     "Total": function () {
+        //         return this.Quantity * this.Price;
+        //     },
+        //     "Print": function () {
+        //         document.write(`Name=${this.Name}<br>Price=${this.Price}<br>Quantity=${this.Quantity}<br>Total=${this.Total()}`);
+        //     }
+        // }
+        // product.Name = prompt("Enter Name:");
+        // product.Price = parseFloat(prompt("Enter Price:"));
+        // product.Quantity = parseInt(prompt("Enter Quantity:"));
+        // product.Print();
+
+        // Array of Objects
+        // Presenting using Table Style
+        // function bodyload(){
+        //     fetch("../data/products.json")
+        //     .then(function(response){
+        //         return response.json();
+        //     })
+        //     .then(function(data){
+        //         for(var item of data){
+        //             var tr=document.createElement("tr");
+        //             var tdName=document.createElement("td");
+        //             var tdPrice=document.createElement("td");
+        //             var tdPhoto=document.createElement("td");
+        //             tdName.innerHTML=item.Name;
+        //             tdPrice.innerHTML=item.Price;
+
+        //             var img=document.createElement("img");
+        //             img.width="100";
+        //             img.height="100";
+        //             img.src=item.Photo;
+
+        //             tdPhoto.appendChild(img);
+
+        //             tr.appendChild(tdName);
+        //             tr.appendChild(tdPrice);
+        //             tr.appendChild(tdPhoto);
+
+        //             document.querySelector("tbody").appendChild(tr);
+        //         }
+        //     })
+        // }
+
+        // Presenting using Card Style
+        function bodyload() {
+            fetch("../data/products.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    for (var item of data) {
+                        var div = document.createElement("div");
+                        div.className = "card m-2 p-2";
+                        div.style.width = "300px";
+                        div.innerHTML = `<img src=${item.Photo} height="150" class="card-img-top"> <div class="card-header"> <h2>${item.Name}</h2><p>${item.Price}</p></div> <div class="card-footer"><button class="btn btn-danger w-100">Add to Cart</button></div>`;
+                        document.getElementById("catalog").appendChild(div);
+                    }
+                })
         }
-        product.Name = prompt("Enter Name:");
-        product.Price = parseFloat(prompt("Enter Price:"));
-        product.Quantity = parseInt(prompt("Enter Quantity:"));
-        product.Print();
+
 
     </script>
 </head>
@@ -153,7 +203,31 @@
     -->
 
     <!-- Array of Objects -->
-     <!-- Data with multiple objects is reffered as "Array of Objects" -->
+    <!-- Data with multiple objects is reffered as "Array of Objects" -->
+    <!-- Syntax:
+        var products=[{ },{ },{ }] 
+    -->
+    <!-- Presenting using Table Style -->
+    <!-- <h2>Products Table</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table> -->
+
+    <!-- Presenting using Card Style -->
+    <h2>Products Catalog</h2>
+    <div id="catalog" class="d-flex flex-row-reverse justify-content-between">
+
+    </div>
+
 
 
 

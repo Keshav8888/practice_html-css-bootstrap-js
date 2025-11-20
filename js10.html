@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Primitive Data Types-(3). Map</title>
+
+    <script>
+        // var topics=new Map();
+        // topics.set("HTML","It is a markup language");
+        // topics.set(1,"CSS Styles");
+        // document.write(topics.get("HTML"));
+
+        // var topics=new Map();
+        // topics.set("HTML","It is a markup language");
+        // topics.set(1,"CSS Styles");
+        // for(var item of topics.entries()){
+        //     document.write(item+"<br>");
+        // }
+
+        var topics = new Map();
+        topics.set("HTML", "It is a markup language");
+        topics.set(1, "CSS Styles");
+        document.write(topics.has(1));
+
+
+    </script>
+</head>
+
+<body>
+    <!-- (3). Map -->
+    <!-- It is a key and value collection -->
+    <!-- It was introduced into JavaScript from ES5 -->
+    <!-- Syntax:  var obj=new Map(); -->
+     
+    <!-- Methods -->
+    <!-- get(): access any value with reference of keys -->
+    <!-- set(): stores value -->
+    <!-- delete(): remove any specific value -->
+    <!-- has(): find key -->
+    <!-- keys(): return all keys -->
+    <!-- values(): return all values -->
+    <!-- entries(): return both keys and values -->
+    <!-- size: return count of keys -->
+    <!-- clear(): deletes all keys -->
+
+
+    <!-- Difference between Map and Object -->
+            <!-- Object -->                                                      <!-- Map -->
+    <!-- keys always only string type                                        key can be any type -->
+    <!-- No size for keys                                                 Keys size can be accessed -->
+    <!-- Not easy to find key                                           You can find key by using has() -->
+    <!-- Requires explicit iterators to read keys,values         It have implicit iterator methods keys(),values(),ectries() -->
+    <!-- Slow                                                                        fast -->
+    <!-- Synchronous                                                  Asynchronous-no order for reading -->
+
+    <!-- Difference between array.map() and Map() -->
+    <!-- array.map() is a iterator for reading all elements in array
+    Map() is a key value collection -->
+</body>
+
+</html>

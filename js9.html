@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Non-Primitive Data Types- Objects</title>
+    <title>Non-Primitive Data Types-(2). Objects</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script>
@@ -118,6 +118,7 @@
         // }
 
 
+        // Displaying all items from fakestoreapi.com in a shopping format
         // function LoadProducts() {
         //     fetch("https://fakestoreapi.com/products")
         //         .then(function (response) {
@@ -176,13 +177,14 @@
         // }
 
 
+        // Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart
         function LoadCategories() {
             fetch("https://fakestoreapi.com/products/categories")
                 .then(function (response) {
                     return response.json();
                 })
                 .then(function (data) {
-                    data.unshift("All");
+                    data.unshift("all");
                     for (var item of data) {
                         var option = document.createElement("option");
                         option.text = item.toUpperCase();
@@ -211,7 +213,7 @@
                         <h3>${item.price}</h3>
                     </div>
                     <div class="card-footer">
-                        <button onclick="AddToCartclick(${item.id})" class="btn btn-danger w-100">
+                        <button onclick="AddToCartClick(${item.id})" class="btn btn-success w-100">
                             <span class="bi bi-cart4"></span>
                             Add to Cart
                         </button>
@@ -263,21 +265,21 @@
                 tdPrice.innerHTML = item.price;
 
                 var img = document.createElement("img");
-                img.width = "50";
-                img.height = "50";
+                img.width = "70";
+                img.height = "70";
                 img.src = item.image;
 
                 tdPhoto.appendChild(img);
 
                 tdRemove.innerHTML = `
                 <button class="btn btn-outline-danger">
-                    <span class="bi bi-trash2-fill"></span>
+                    <span class="bi bi-trash-fill"></span>
                 </button>`;
 
                 tr.appendChild(tdTitle);
                 tr.appendChild(tdPrice);
                 tr.appendChild(tdPhoto);
-                tr.appendChild(trRemove);
+                tr.appendChild(tdRemove);
 
                 document.querySelector("tbody").appendChild(tr);
             }
@@ -288,6 +290,7 @@
 </head>
 
 <body onload="bodyload()" class="container-fluid">
+
     <!-- (2). Object -->
     <!-- In computer programming Object is used to store similar type of data and logic together-->
     <!-- It represents a pseudo class -->
@@ -395,6 +398,7 @@
     </div> -->
 
 
+    <!-- Displaying all items from fakestoreapi.com in a shopping format -->
     <!-- <header class="bg-danger p-2 text-white text-center">
         <h2>Amazon Shopping</h2>
     </header>
@@ -420,6 +424,7 @@
     </div> -->
 
 
+    <!-- Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart -->
     <header class="bg-danger text-center text-white p-2">
         <h1><span class="bi bi-cart3"></span>Amazon Shopping</h1>
     </header>
@@ -460,7 +465,7 @@
                                         <th>Price</th>
                                         <th>Preview</th>
                                         <th>
-                                            <span class="bi bi-trash-fill text-danger"></span>
+                                            <span class="bi bi-trash text-danger"></span>
                                         </th>
                                     </tr>
                                 </thead>
@@ -476,9 +481,6 @@
     </section>
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-
-
-
 
 
 </body>

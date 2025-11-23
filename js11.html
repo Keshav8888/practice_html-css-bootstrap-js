@@ -14,9 +14,16 @@
 
         var Name="Samsung TV";
         var Price=60000;
-        var Manufactured=new Date("2025-11-20 05:25:34");
-        var days=["Sunday","Monday","Tuesday","Wednesday","Thrusday",]
-
+        var Manufactured=new Date("2025-03-20 05:25:34");
+        var days=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"];
+        var months=["January","February","March"];
+        document.write(`
+        Weekday:${days,[Manufactured.getDay()]}<br>
+        Month:${months[Manufactured.getMonth()]}<br>
+        Date:${Manufactured.getDate()}<br>
+        Year:${Manufactured.getFullYear()}<br>
+        Date:${Manufactured.getDay()},${Manufactured.getDate()}-${months[Manufactured.getMonth()]}-${Manufactured.getFullYear()}
+        `)
 
     </script>
 </head>

@@ -63,45 +63,60 @@
         //     ShowMessage();
         // }
 
-
-        function LoadProducts(id){
+        // Slideshow using setInterval()
+        function LoadProducts(id) {
             fetch(`https://fakestoreapi.com/products/${id}`)
-            .then(function(response){
-                return response.json();
-            })
-            .then(function(data){
-                document.getElementById("pic").src=data.image;
-                document.getElementById("title").innerHTML=data.title;
-                document.getElementById("price").innerHTML="&#8377;" +data.price;
-                document.getElementById("rating").innerHTML=data.rating.rate+"<span class='bi bi=star-fill text-success'></span>";
-            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    document.getElementById("pic").src = data.image;
+                    document.getElementById("title").innerHTML = data.title;
+                    document.getElementById("price").innerHTML = "&#8377;" + data.price;
+                    document.getElementById("rating").innerHTML = data.rating.rate + "<span class='bi bi-star-fill text-success'></span>";
+                })
         }
-        function bodyload(){
+        function bodyload() {
             LoadProducts(1);
         }
-        var productId=1;
-        function NextClick(){
+        var productId = 1;
+        function NextClick() {
             productId++;
             LoadProducts(productId);
         }
-        function PreviousClick(){
+        function PreviousClick() {
             productId--;
             LoadProducts(productId);
         }
-        function StartShow(){
+        function StartShow() {
             productId++;
             LoadProducts(productId);
         }
         var show;
-        function PlayClick(){
-            show=setInterval(StartShow,5000);
-            document.getElementById("status").innerHTML="Slide Show - Started";
+        function PlayClick() {
+            show = setInterval(StartShow, 5000);
+            document.getElementById("status").innerHTML = "Slide Show - Started";
         }
-        function PauseClick(){
+        function PauseClick() {
             clearInterval(show);
-            document.getElementById("status").innerHTML="Slide Show - Paused";
+            document.getElementById("status").innerHTML = "Slide Show - Paused";
         }
     </script>
+
+    <style>
+        #price{
+            position: fixed;
+            top: 200px;
+            right: 270px;
+            font-size: 25px;
+            font-weight: bold;
+            border: 2px solid black;
+            background-color: yellow;
+            padding: 5px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+    </style>
 </head>
 
 <body onload="bodyload()" class="container-fluid">
@@ -142,6 +157,7 @@
         </div>
     </div> -->
 
+    <!-- Slideshow using setInterval() -->
     <div class="d-flex justify-content-center align-items-center">
         <div class="card mt-4 p-2" style="width: 350px;">
             <div class="card-header text-center">
@@ -159,7 +175,7 @@
             </div>
             <div class="card-body">
                 <p id="price"></p>
-                <p class="rating"></p>
+                <p id="rating"></p>
             </div>
             <div class="card-footer">
                 <button onclick="PreviousClick()" class="btn btn-danger">

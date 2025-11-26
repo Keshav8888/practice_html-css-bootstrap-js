@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascading Dropdown-switch case</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script>
+        var categories = ["Select a Category", "Electronics", "Footwear", "Fashion"];
+        var electronics = ["Select a Electronics", "Sony Speaker"];
+        var footwear = ["Select a Footwear", "Nike Casuals", "Lee Boot"];
+        var fashion = ["Select Fashion", "Winter Jacket", "Backpack"];
+        var products = [];
+        var data = [
+            { Name: "Sony Speaker", Price: 4000, Photo: "./speaker.jpeg" },
+            { Name: "Neckband", Price: 2000, Photo: "./neckband.jpg" },
+            { Name: "Nike Casuals", Price: 3000, Photo: "./shoe.jpeg" },
+            { Name: "Lee Boot", Price: 3500, Photo: "./shoe1.jpg" },
+            { Name: "Winter Jacket", Price: 5000, Photo: "./jacket.jpg" },
+            { Name: "Backpack", Price: 500, Photo: "./backpack.wbep" },
+        ];
+        function LoadProducts() {
+            document.getElementById("1stProducts").innerHTML = "";
+            for (var item of products) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("1stProducts").appendChild(option);
+            }
+        }
+        function LoadCategories() {
+            for (var item of categories) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("1stCategories").appendChild(option);
+            }
+        }
+        function bodyload() {
+            LoadCategories();
+            GetcartCount();
+        }
+        function CategoryChange() {
+            var categoryname = document.getElementById("1stCategories").value;
+            switch (categoryname) {
+                case "Electronics":
+                    products = electronics;
+                    LoadProducts();
+                    break;
+                case "Footwear":
+                    products = footwear;
+                    LoadProducts();
+                    break;
+                case "Fashion":
+                    products = fashion;
+                    LoadProducts();
+                    break;
+                default:
+                    products = ["Please Select Category"];
+                    LoadProducts();
+                    break;
+            }
+        }
+        var searchedProduct;
+            function ProductChange(){
+                var productname=document.getElementById("1stProducts").value;
+                searchedProduct=data.find(function(product){
+                    return
+                    productName==productname;
+                });
+                document.getElementById("pic").src=searchedProduct.Photo;
+                document.getElementById("productName").innerHTML=searchedProduct.Name;
+                document.getElementById("productPrice").innerHTML=searchedProduct.Price;
+            }
+            var cartItems=[];
+            function GetcartCount(){
+                document.getElementById("productPrice").innerHTML=cartItems.length;
+            }
+            function AddToCartClick(){
+                cartItems.push(searchedProduct);
+                alert("Item Added to cart");
+                GetcartCount();
+            }
+            function ShowCartClick(){
+                document.getElementById("cart").style.display="block";
+                document.querySelector("tbody").innerHTML="";
+                for(var item of items){
+                    var tr=document.createElement("tr");
+                    var tdName=document.createElement("td");
+                    var tdPhoto=document.createElement("td");
+                    tdName.innerHTML=item.Name;
+                    tdPrice.innerHTMLitem.Price;
+                    var img=document.createElement("img");
+                    img.src=item.Photo;
+                    img.width="50";
+                    img.height="50";
+                    tdPhoto.appendChild(img);
+                    tr.appendChild(tdName);
+                    tr.appendChild(tdPrice);
+                    tr.append(tdPhoto);
+
+                    document.querySelector("tbody").appendChild(tr);
+                }
+            }
+    </script>
+</head>
+
+<body class="container-fluid" onload="bodyload()">
+    <header class="bg-danger text-white text-center p-2">
+        <h1><span class="bi bi-cart"></span>Amazon Shopping</h1>
+    </header>
+    <section class="row">
+        <nav class="col-3">
+            <div class="mt-2">
+                <label class="form-label">Select Category</label>
+            </div>
+            <select onchange="CategoryChanged()" id="1stCategories" class="form-select">
+
+            </select>
+            <div class="mt-2">
+                <label class="form-label">Select Product</label>
+            </div>
+            <select onchange="ProductChange()" id="1stProducts" class="form-select">
+
+            </select>
+            <div class="mt-2">
+                <label class="form-label" for="">Preview</label>
+                <div class="card">
+                    <img id="pic" class="card-img-top" height="200">
+                </div>
+                <div class="card-header">
+                    <h2 id="productName"></h2>
+                    <p id="productPrice"></p>
+                </div>
+                <div class="card-footer">
+                    <button onclick="AddToCartClick()" class="btn btn-danger w-100">
+                        <span class="bi bi-cart4"></span>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="col-6">
+            <table id="cart" style="display: none;" class="table table-hover caption-top">
+                <caption>Your Cart Items</caption>
+                <thead>
+                    <tr>
+                        <th>name</th>
+                        <th>Price</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </main>
+        <aside class="col-3">
+            <div class="mt-2">
+                <button onclick="ShowCartClick()" class="btn btn-danger w-100">
+                    <span class="bi bi-cart"></span>
+                    [<span id="count"></span>]
+                    Your Cart Items
+                </button>
+            </div>
+        </aside>
+    </section>
+
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+</body>
+
+</html>

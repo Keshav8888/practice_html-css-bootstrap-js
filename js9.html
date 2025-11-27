@@ -177,7 +177,7 @@
         // }
 
 
-        // Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart
+        // Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart->displaying it->deleting it
         function LoadCategories() {
             fetch("https://fakestoreapi.com/products/categories")
                 .then(function (response) {
@@ -271,8 +271,13 @@
 
                 tdPhoto.appendChild(img);
 
+                // tdRemove.innerHTML = `
+                // <button class="btn btn-outline-danger">
+                //     <span class="bi bi-trash-fill"></span>
+                // </button>`;
+
                 tdRemove.innerHTML = `
-                <button class="btn btn-outline-danger">
+                <button onclick="RemoveCartItem(${item.id})" class="btn btn-outline-danger">  //"btn btn-outline-danger" will render a button that appears as a red outline with red text, and when hovered over, it will fill with a red background.
                     <span class="bi bi-trash-fill"></span>
                 </button>`;
 
@@ -283,6 +288,18 @@
 
                 document.querySelector("tbody").appendChild(tr);
             }
+        }
+        function RemoveCartItem(id) {
+
+            CartItems = CartItems.filter(function (product) {
+                return product.id !== id;
+            });
+
+            GetCartItemsCount();
+
+            ShowCart();
+
+            alert("Product Removed From Cart");
         }
 
 
@@ -424,7 +441,7 @@
     </div> -->
 
 
-    <!-- Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart -->
+    <!-- Displaying all items from fakestoreapi.com in a shopping format, then Filtering different sections and adding the products in a cart->displaying it->deleting it -->
     <header class="bg-danger text-center text-white p-2">
         <h1><span class="bi bi-cart3"></span>Amazon Shopping</h1>
     </header>

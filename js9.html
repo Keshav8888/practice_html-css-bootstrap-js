@@ -248,7 +248,9 @@
                 .then(function (data) {
                     CartItems.push(data);
                     GetCartItemsCount();
-                    alert(`${data.title} \n Added to Cart`);
+                    RemoveFromCatalog(id);
+                    ShowToast(`${data.title} Added to Cart`, "success");
+                    // alert(`${data.title} \n Added to Cart`);
                 })
         }
 
@@ -271,13 +273,8 @@
 
                 tdPhoto.appendChild(img);
 
-                // tdRemove.innerHTML = `
-                // <button class="btn btn-outline-danger">
-                //     <span class="bi bi-trash-fill"></span>
-                // </button>`;
-
                 tdRemove.innerHTML = `
-                <button onclick="RemoveCartItem(${item.id})" class="btn btn-outline-danger">  //"btn btn-outline-danger" will render a button that appears as a red outline with red text, and when hovered over, it will fill with a red background.
+                <button onclick="RemoveCartItem(${item.id})" class="btn btn-outline-danger">  
                     <span class="bi bi-trash-fill"></span>
                 </button>`;
 
@@ -289,19 +286,59 @@
                 document.querySelector("tbody").appendChild(tr);
             }
         }
-        function RemoveCartItem(id) {
+        // function RemoveCartItem(id) {
 
+        //     CartItems = CartItems.filter(function (product) {
+        //         return product.id !== id;
+        //     });
+
+        //     GetCartItemsCount();
+
+        //     ShowCart();
+
+        //     alert("Product Removed From Cart");
+        // }
+
+        function RemoveCartItem(id) {
             CartItems = CartItems.filter(function (product) {
                 return product.id !== id;
             });
 
             GetCartItemsCount();
-
             ShowCart();
 
-            alert("Product Removed From Cart");
+            // Show toast instead of alert
+            ShowToast("Product Removed From Cart");
+        }
+        function RemoveFromCatalog(id) {
+            var cards = document.querySelectorAll("#catalog .card");
+
+            cards.forEach(card => {
+                if (card.innerHTML.includes(`AddToCartClick(${id})`)) {
+                    card.remove();
+                }
+            });
         }
 
+        function ShowToast(message) {
+            document.getElementById("toastBody").innerHTML = message;
+
+            var toastElement = document.getElementById("toastMsg");
+            var toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+        function ShowToast(message, color = "success") {
+            var toastEl = document.getElementById("toastMsg");
+            var toastBody = document.getElementById("toastBody");
+
+            toastEl.classList.remove("bg-success", "bg-danger");
+            toastEl.classList.add("bg-" + color);
+
+            toastBody.innerHTML = message;
+
+            var toast = new bootstrap.Toast(toastEl);
+            toast.show();
+        }
 
     </script>
 </head>
@@ -496,6 +533,28 @@
             </div>
         </div>
     </section>
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+        <div id="toastMsg" class="toast align-items-center text-white bg-success border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastBody"></div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 9999">
+        <div id="toastMsg" class="toast align-items-center text-white bg-danger border-0" role="alert">
+            <div class="d-flex">
+                <div class="toast-body" id="toastBody">
+                    <!-- Message will be inserted here -->
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
     <script src="./node_modules/jquery/dist/jquery.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 

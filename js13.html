@@ -5,10 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Operators</title>
+
+    <script>
+        function AddClick() {
+            var folderName = prompt("Enter Name:");
+            document.querySelector("p").innerHTML += `Folder Created:${folderName} <br>`;
+        }
+    </script>
 </head>
 
 <body>
-    
+
     <!-- Operator is an object that evaluates a value -->
     <!-- Operator keeps data in operands -->
     <!-- Operator defines functionality using entity "+ , - , * , /" -->
@@ -81,11 +88,37 @@
     <!-- Pre Decrement
     x=10;
     y=--x;    x=9,y=9 -->
-    
 
+    <!-- Comparison Operators 
+    ==  Equal
+    ===  Identical Equal
+    !=  Not Equal
+    !==  Not Identical
+    >  Greater than
+    >=  Greater than or Equal
+    <  Less than
+    <=  Lesser than or Equal  -->
 
+    <!-- difference between "==" and "==="
+    == can compare 2 values of various types
+    var x="10";  string
+    var y=10;  number
+    x==y  true
+    x===y  false -->
     
-    
+    <!-- === can compare 2 values of same type only -->
+
+    <!-- 2. Assignment Operators
+    +=  Add and Assign
+    -=
+    *=
+    /=
+    **=
+    %= -->
+
+    <button onclick="AddClick()">Add Folder</button>
+    <p></p>
+
 </body>
 
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+        
+    </script>
+</head>
+<body onload="bodyload()">
+    <fieldset>
+        <legend>User Login</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" id="UserName"></dd>
+            <dt>Password</dt>
+            <dd><input type="text" id="Password"></dd>
+            <dt>Vreify Code <button onclick="GetNewCode()"><span class="bi bi-arrow-clockwise"></span></button></dt>
+            <dd id="code"></dd>
+            <dd><input type="text" size="6"></dd>
+        </dl>
+        <button onclick="LoginClick()">Login</button>
+    </fieldset>
+    <h2 id="msg" align="center"></h2>
+    
+</body>
+</html>

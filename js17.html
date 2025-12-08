@@ -2,28 +2,30 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verify Mobile</title>
-    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <script>
         var flag = "";
         var regExp;
         var placeholder = "";
         function CountryChanged() {
 
-            var countryname = document.getElementById("lstCountry").value;
+            var countryname = document.getElementById("1stCountry").value;
             switch (countryname) {
                 case "India":
-                    flag = "../images/india_flag.avif";
+                    flag = "./images/india_flag.avif";
                     regExp = /\+91\d{10}/;
                     placeholder = "India Calling Code : +91 and number 10 digits";
                     break;
                 case "US":
-                    flag = "../public/images/us.png";
+                    flag = "./images/us_flag.webp";
                     regExp = /\+1\d{6}/;
                     placeholder = "US Calling Code : +1 and number 6 digits";
                     break;
                 case "UK":
-                    flag = "../public/images/uk.png";
+                    flag = "./images/uk_flag.webp";
                     regExp = /\+44\d{8}/;
                     placeholder = "UK Calling Code : +44 and number 8 digits";
                     break;
@@ -41,7 +43,7 @@
             if (mobile.match(regExp)) {
                 document.write("Registered successfully..");
             } else {
-                msg.innerHTML = Invalid Mobile < br > ${ placeholder }.fontcolor('red');
+                msg.innerHTML = `Invalid Mobile <br> ${ placeholder }`.fontcolor('red');
             }
         }
     </script>
@@ -52,7 +54,7 @@
     <dl>
         <dt>Select Country</dt>
         <dd class="input-group">
-            <select onchange="CountryChanged()" id="lstCountry" class="form-select">
+            <select onchange="CountryChanged()" id="1stCountry" class="form-select">
                 <option>Select Your Country</option>
                 <option>India</option>
                 <option>US</option>
@@ -67,7 +69,7 @@
     </dl>
     <button onclick="VerifyClick()" class="btn btn-primary">Verify</button>
     <h3 id="msg" align="center"></h3>
-     
+    
 </body>
 
 </html>

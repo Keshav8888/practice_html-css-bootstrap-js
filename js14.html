@@ -1,0 +1,127 @@
+Statements in JavaScript
+             ----------------------------------
+
+Variables
+Data Types
+Operators
+Statements
+- Statements are used to control the execution flow.
+- JavaScript statements are classified into following types
+
+    a) Selection Statements
+        if, else, switch, case, default
+    b) Iteration Statements
+        for..in, for..of
+    c) Looping Statements
+        for, while, do while
+    d) Jump Statements
+        break, continue, return
+    e) Exception Handling Statements
+        try, catch, throw, finally
+
+
+Selection Statements:
+- They are used in decision making.
+- If condition is true the a set of statements to execute and another set of statements when condition is false.
+- Selection statement keywords
+    if, else, switch, case, default
+
+1. The "IF" selector
+    a) Forward Jump
+    b) Simple Decision
+    c) Multi Level Decision
+    d) Multiple Decision
+
+Forward Jump:  It contains statements to execute only when condition is true. There will not be any alternative.
+
+    if(condition)
+    {
+     statement_if_true;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment</title>
+        <script>
+            var UserDetails = {
+                "CardNumber": "4444555566667890",
+                "CVV": "3420",
+                "Expiry": "2024"
+            }
+            function VerifyCard(){
+                var card = document.getElementById("txtCard").value;
+                if(card==UserDetails.CardNumber) {
+                    document.getElementById("txtCvv").disabled= false;
+                }
+            }
+            function VerifyCvv(){
+                var cvv = document.getElementById("txtCvv").value;
+                if(cvv==UserDetails.CVV) {
+                    document.getElementById("lstExpiry").disabled= false;
+ }
+            }
+            function VerifyYear(){
+                var year = document.getElementById("lstExpiry").value;
+                if(year==UserDetails.Expiry) {
+                    document.getElementById("btnPay").disabled=false;
+                }
+            }
+            function PayClick(){
+                document.write("<h2>Payment Successfull..</h2>");
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Payment Details</legend>
+            <dl>
+                <dt>Card Number</dt>
+                <dd><input type="text" onkeyup="VerifyCard()"  id="txtCard"></dd>
+                <dt>CVV</dt>
+                <dd><input type="text" onkeyup="VerifyCvv()" disabled id="txtCvv" size="4"></dd>
+                <dt>Expiry</dt>
+                <dd>
+                    <select disabled onchange="VerifyYear()" id="lstExpiry">
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                    </select>
+                </dd>
+            </dl>
+            <button onclick="PayClick()" disabled id="btnPay">Pay</button>
+</fieldset>
+    </body>
+</html>
+
+
+Simple Decision:
+- We provide an alternative to show the status.
+- Only one alternative is provided.
+- IF and Else clause.
+
+Syntax:
+    if (condition )
+    {
+     statement _ if _ true;
+    }
+    else
+    {
+     statement_if_false;
+    }
+
+Ex:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment</title>
+        <script>
+            var UserDetails = {
+                "CardNumber": "4444555566667890",
+                "CVV": "3420",
+                "Expiry": "2024"
+            }
+            function VerifyCard(){
+                var card = document.getElementById("txtCard").value;
+

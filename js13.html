@@ -4,17 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Operators</title>
-
+    <title>JavaScript Operators1</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script>
+        // Ex1:
+        // function LoadProducts(id) {
+        //     fetch(`https://fakestoreapi.com/products/${id}`)
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (data) {
+        //             document.getElementById("pic").src = data.image;
+        //             document.getElementById("title").innerHTML = data.title;
+        //             document.getElementById("price").innerHTML = "&#8377;" + data.price;
+        //             document.getElementById("rating").innerHTML = data.rating.rate + "<span class='bi bi-star-fill text-success'></span>";
+        //         })
+        // }
+        // function bodyload() {
+        //     LoadProducts(1);
+        // }
+        // var productId = 1;
+        // function NextClick() {
+        //     productId++;
+        //     LoadProducts(productId);
+        // }
+        // function PreviousClick() {
+        //     productId--;
+        //     LoadProducts(productId);
+        // }
+        // function StartShow() {
+        //     productId++;
+        //     LoadProducts(productId);
+        // }
+        // var show;
+        // function PlayClick() {
+        //     show = setInterval(StartShow, 3000);
+        //     document.getElementById("status").innerHTML = "Slide Show - Started";
+        // }
+        // function PauseClick() {
+        //     clearInterval(show);
+        //     document.getElementById("status").innerHTML = "Slide Show - Paused";
+        // }
+
+
+        // Ex: % operator (Validation)
+        // function VerifyNumber(){
+        //     var n=parseInt(document.getElementById("txtEven").value);
+        //     var msg=document.getElementById("msg");
+        //     if(n%2==0){
+        //         msg.innerHTML="You entered Even Number";
+        //     }else{
+        //         msg.innerHTML="Not an Even Number".fontcolor('red');
+        //     }
+        // }
+
+
+        // Ex2:
         function AddClick() {
             var folderName = prompt("Enter Name:");
             document.querySelector("p").innerHTML += `Folder Created:${folderName} <br>`;
         }
     </script>
+
+    <style>
+        /* Ex1: */
+        /* #price {
+            position: fixed;
+            top: 200px;
+            right: 270px;
+            font-size: 25px;
+            font-weight: bold;
+            border: 2px solid black;
+            background-color: yellow;
+            padding: 5px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        } */
+    </style>
+
 </head>
 
-<body>
+<body onload="bodyload()" class="container-fluid">
 
     <!-- Operator is an object that evaluates a value -->
     <!-- Operator keeps data in operands -->
@@ -24,18 +95,18 @@
     <!-- Based on how many operands an operator can handle, the operators are classified into-
     a) Unary - one operand   x++
     b) Binary - two operands   x/y+z
-    c) Ternary - three operands   (operand1) ? operand2 : operand3 -->
-    <!-- Ternary Operator: "?:"
+    c) Ternary - three operands   (operand1) ? operand2 : operand3
+    Ternary Operator: "?:"
     (condition) ? true : false; -->
 
-    <!-- Operators are further classified into various types based on the type of value they return
+    <!-- Operators are further classified into various types based on the type of value they return.
     1. Arithmetic Operators
     2. Assignment Operators
     3. Conditional Operators
     4. Logical Operators
     5. Special Operators -->
 
-    <!-- 1. Arithmetic Operators: They always return a number.
+    <!-- Arithmetic Operators: They always return a number.
     + Addition
     - Substraction
     * Multiplication
@@ -49,7 +120,7 @@
     Math.cos
     Math.sqrt -->
 
-    <!-- Addition(+): used for finding the sum of value
+    <!-- Addition(+): used for finding the sum of value.
     string + string = string
     string + number = string
     number + number = number
@@ -57,14 +128,14 @@
     string + boolean = string
     boolean + boolean = number -->
 
-    <!-- Substraction(-): used for finding difference value
+    <!-- Substraction(-): used for finding difference value.
     string - string = NaN
     string - number = NaN
     number - number = number
     number - boolean = number
     boolean - boolean = number -->
 
-    <!-- Multiplication(*): used to find the product of given numbers
+    <!-- Multiplication(*): used to find the product of given numbers.
     string * string = NaN -->
 
     <!-- Increment(++)
@@ -73,21 +144,61 @@
     <!-- Decrement(--)
     x-- : x=x-1; -->
 
-    <!-- Post Increment
+    <!-- Post Increment(x++)
     x=10;
     y=x++;      x=11,y=10 -->
 
-    <!-- Pre Increment
+    <!-- Pre Increment(++x)
     x=10;
     y=++x;      x=11,y=11 -->
 
-    <!-- Post Decrement
+    <!-- Post Decrement(x--)
     x=10;
     y=x--;    x=9,y=10 -->
 
-    <!-- Pre Decrement
+    <!-- Pre Decrement(--x)
     x=10;
     y=--x;    x=9,y=9 -->
+
+    <!-- Ex1: -->
+    <!-- <div class="d-flex justify-content-center align-items-center">
+        <div class="card mt-4 p-2" style="width: 350px;">
+            <div class="card-header text-center">
+                <button onclick="PlayClick()" class="btn btn-danger">
+                    <span class="bi bi-play"></span>
+                </button>
+                <button onclick="PauseClick()" class="btn btn-danger">
+                    <span class="bi bi-pause"></span>
+                </button>
+                <p id="status"></p>
+            </div>
+            <img id="pic" height="200" class="card-img-top">
+            <div class="card-header text-center" style="height:160px">
+                <p id="title"></p>
+            </div>
+            <div class="card-body">
+                <p id="price"></p>
+                <p id="rating"></p>
+            </div>
+            <div class="card-footer text-center">
+                <button onclick="PreviousClick()" class="btn btn-danger">
+                    <span class="bi bi-chevron-left"></span>
+                </button>
+                <button onclick="NextClick()" class="btn btn-danger">
+                    <span class="bi bi-chevron-right"></span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Ex: % operator (Validation) -->
+    <!-- <fieldset>
+        <legend>Enter an Even Number:</legend>
+        <div>
+            <input onblur="VerifyNumber()" type="text" id="txtEven">
+            <div id="msg"></div>
+        </div>
+     </fieldset> -->
 
     <!-- Comparison Operators 
     ==  Equal
@@ -105,17 +216,16 @@
     var y=10;  number
     x==y  true
     x===y  false -->
-
     <!-- === can compare 2 values of same type only -->
 
-    <!-- 2. Assignment Operators
+    <!-- Assignment Operators
     +=  Add and Assign
     -=
     *=
     /=
     **=
     %= -->
-
+    <!-- Ex2: -->
     <button onclick="AddClick()">Add Folder</button>
     <p></p>
 

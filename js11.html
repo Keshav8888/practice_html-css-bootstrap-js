@@ -9,11 +9,27 @@
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
     <script>
+
+        //  var mfd=new Date(); //loads current system date and time
+        //  var mfd=new Date("YY-MM-DD"); 
+        // Ex:
         // var Name = "Samsung TV";
         // var Price = 60000;
         // var Manufactured = new Date("2025-11-20 05:08:34");
         // document.write(Name + "<br>" + Price + "<br>" + Manufactured);
 
+        // Date Methods
+        // getHours(): 0 - 23
+        // getMinutes(): 0 - 59
+        // getSeconds(): 0 - 59
+        // getMiliSeconds(): 0 - 99
+        // getDay(): Weekday number 0 = Sunday
+        // getDate(): Date number - 22
+        // getMonth(): Month number 2022
+        // getFullYear(): Year number 2022
+        // toLocaleDateString(): Short Date
+        // toLocaleTimeString(): Short Time
+        // Ex:
         // var Name = "Samsung TV";
         // var Price = 60000;
         // var Manufactured = new Date("2025-03-20 05:25:34");
@@ -26,6 +42,20 @@
         // Year:${Manufactured.getFullYear()}<br>
         // Date:${Manufactured.getDay()},${Manufactured.getDate()}-${months[Manufactured.getMonth()]}-${Manufactured.getFullYear()}
         // `)
+
+
+        // Date Set Methods
+        // setHours()
+        // setMinutes()
+        // setSeconds()
+        // setMilliSeconds()
+        // setDate()
+        // setMonth()
+        // setYear()
+        // Ex:
+        // var mfd=new Date("2022-08-28");
+        // mfd.setDate(20);
+        // document.write(mfd.toLocaleDateString());
 
         // Displaying current date-time
         // function ShowDate() {
@@ -63,60 +93,11 @@
         //     ShowMessage();
         // }
 
-        // Slideshow using setInterval()
-        function LoadProducts(id) {
-            fetch(`https://fakestoreapi.com/products/${id}`)
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    document.getElementById("pic").src = data.image;
-                    document.getElementById("title").innerHTML = data.title;
-                    document.getElementById("price").innerHTML = "&#8377;" + data.price;
-                    document.getElementById("rating").innerHTML = data.rating.rate + "<span class='bi bi-star-fill text-success'></span>";
-                })
-        }
-        function bodyload() {
-            LoadProducts(1);
-        }
-        var productId = 1;
-        function NextClick() {
-            productId++;
-            LoadProducts(productId);
-        }
-        function PreviousClick() {
-            productId--;
-            LoadProducts(productId);
-        }
-        function StartShow() {
-            productId++;
-            LoadProducts(productId);
-        }
-        var show;
-        function PlayClick() {
-            show = setInterval(StartShow, 3000);
-            document.getElementById("status").innerHTML = "Slide Show - Started";
-        }
-        function PauseClick() {
-            clearInterval(show);
-            document.getElementById("status").innerHTML = "Slide Show - Paused";
-        }
+        
+
     </script>
 
-    <style>
-        #price{
-            position: fixed;
-            top: 200px;
-            right: 270px;
-            font-size: 25px;
-            font-weight: bold;
-            border: 2px solid black;
-            background-color: yellow;
-            padding: 5px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-        }
-    </style>
+    
 </head>
 
 <body onload="bodyload()" class="container-fluid">
@@ -124,20 +105,6 @@
     <!-- JavaScript date values are stored by using "Date()" constructor -->
     <!-- It allocates memory for storing a date type of value -->
 
-    <!-- var mfd=new Date(); loads current system date and time -->
-    <!-- var mfd=new Date("YY-MM-DD"); -->
-
-    <!-- Date Methods -->
-    <!-- getHours(): 0-23
-    getMinutes(): 0-59
-    getSeconds(): 0-59
-    getMiliSeconds(): 0-99
-    getDay(): Weekday number 0=Sunday
-    getDate(): Date number-22
-    getMonth(): Month number 2022
-    getFullYear(): Year number 2022
-    toLocaleDateString(): Short Date
-    toLocaleTimeString(): Short Time -->
 
     <!-- Displaying current date-time -->
     <!-- <div class="btn-toolbar bg-danger mt-2 justify-content-between">
@@ -157,36 +124,7 @@
         </div>
     </div> -->
 
-    <!-- Slideshow using setInterval() -->
-    <div class="d-flex justify-content-center align-items-center">
-        <div class="card mt-4 p-2" style="width: 350px;">
-            <div class="card-header text-center">
-                <button onclick="PlayClick()" class="btn btn-danger">
-                    <span class="bi bi-play"></span>
-                </button>
-                <button onclick="PauseClick()" class="btn btn-danger">
-                    <span class="bi bi-pause"></span>
-                </button>
-                <p id="status"></p>
-            </div>
-            <img id="pic" height="200" class="card-img-top">
-            <div class="card-header text-center" style="height:160px">
-                <p id="title"></p>
-            </div>
-            <div class="card-body">
-                <p id="price"></p>
-                <p id="rating"></p>
-            </div>
-            <div class="card-footer">
-                <button onclick="PreviousClick()" class="btn btn-danger">
-                    <span class="bi bi-chevron-left"></span>
-                </button>
-                <button onclick="NextClick()" class="btn btn-danger">
-                    <span class="bi bi-chevron-right"></span>
-                </button>
-            </div>
-        </div>
-    </div>
+    
 
 
 </body>

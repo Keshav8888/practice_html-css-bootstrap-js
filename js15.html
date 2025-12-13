@@ -5,6 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Operators2</title>
+
+    <script>
+        // Ex2:Logical Operators
+        // var data = [
+        //     { Name: "TV", Category: "Electronics" },
+        //     { Name: "Nike Casuals", Category: "Footwear" },
+        //     { Name: "Mobile", Category: "Electronics" },
+        //     { Name: "Backpack", Category: "Fashion" },
+        // ];
+        // var result = data.filter(function (item) {
+        //     return item.Category == "Electronics" || item.Category == "Fashion";
+        // })
+        // for (var item of result) {
+        //     document.write(item.Name + "<br>");
+        // }
+
+        // Ex4:
+        var text="Available";
+        function StockToggle(){
+            var stock=document.getElementById("Stock");
+            if(stock.checked){
+                document.getElementById("msg").innerHTML=text;
+            }else{
+                document.getElementById("msg").innerHTML="Out Of Stock";
+            }
+            document.getElementById("msg").innerHTML=(stock.checked)?text:"Out of Stock"
+        }
+    </script>
 </head>
 
 <body>
@@ -17,12 +45,19 @@
     expression1 || expression2 = true [any one is true]
     !true = false -->
 
-    <!-- Ex: -->
+    <!-- Ex1: -->
     <!-- 1. Add a new file into data folder as "users.json"
     2. Add a login screen in "login.html" -->
 
+    <!-- Ternary Operator -->
+    <!-- Syntax:
+    (condition)? statement if true : statement if false -->
 
+    <!-- Ex3:
+    (btnText=="show")?"Hide":"Show"; -->
 
+    <!-- Ex4: -->
+    <input onchange="StockToggle()" type="checkbox" checked id="stock"><span id="msg">Available</span>
 
 </body>
 

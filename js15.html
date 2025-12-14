@@ -22,15 +22,15 @@
         // }
 
         // Ex4:
-        var text="Available";
-        function StockToggle(){
-            var stock=document.getElementById("Stock");
-            if(stock.checked){
-                document.getElementById("msg").innerHTML=text;
-            }else{
-                document.getElementById("msg").innerHTML="Out Of Stock";
-            }
-            document.getElementById("msg").innerHTML=(stock.checked)?text:"Out of Stock"
+        var text = "Available";
+        function StockToggle() {
+            var stock = document.getElementById("Stock");
+            // if (stock.checked) {
+            //     document.getElementById("msg").innerHTML = text;
+            // } else {
+            //     document.getElementById("msg").innerHTML = "Out of Stock";
+            // }
+            document.getElementById("msg").innerHTML = (stock.checked) ? text : "Out of Stock"
         }
     </script>
 </head>
@@ -57,7 +57,7 @@
     (btnText=="show")?"Hide":"Show"; -->
 
     <!-- Ex4: -->
-    <input onchange="StockToggle()" type="checkbox" checked id="stock"><span id="msg">Available</span>
+    <input onchange="StockToggle()" type="checkbox" checked id="Stock"><span id="msg">Available</span>
 
 </body>
 

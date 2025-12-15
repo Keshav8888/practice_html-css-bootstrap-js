@@ -21,17 +21,58 @@
         //     document.write(item.Name + "<br>");
         // }
 
-        // Ex4:
-        var text = "Available";
-        function StockToggle() {
-            var stock = document.getElementById("Stock");
-            // if (stock.checked) {
-            //     document.getElementById("msg").innerHTML = text;
-            // } else {
-            //     document.getElementById("msg").innerHTML = "Out of Stock";
-            // }
-            document.getElementById("msg").innerHTML = (stock.checked) ? text : "Out of Stock"
-        }
+        // Ex2:Ternary Operator
+        // var text = "Available";
+        // function StockToggle() {
+        //     var stock = document.getElementById("Stock");
+        //     // if (stock.checked) {
+        //     //     document.getElementById("msg").innerHTML = text;
+        //     // } else {
+        //     //     document.getElementById("msg").innerHTML = "Out of Stock";
+        //     // }
+        //     document.getElementById("msg").innerHTML = (stock.checked) ? text : "Out of Stock"
+        // }
+
+        // Ex1:typeof
+        // function GetProducts() {
+        //     fetch("../data/product.json")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (data) {
+        //             for (var property in data) {
+        //                 document.write(`${property}:${typeof data[property]} <br>`);
+        //             }
+        //         })
+        // }
+        // GetProducts();
+
+        // Ex1:instanceof
+        // class Employee {
+
+        // }
+        // class Product {
+
+        // }
+        // let tv = new Product();
+        // let david = new Employee();
+        // let products = new Array();
+        // document.write(david instanceof Employee);
+        // document.write(products instanceof Array);
+
+        // Ex:delete in
+        // var product = {
+        //     Name: "TV",
+        //     Price: "30000"
+        // }
+        // delete product.Price;
+        // if ("Price" in product) {
+        //     document.write(`Name=${product.Name}<br>Price=${product.Price}`);
+        // } else {
+        //     document.write(`Name=${product.Name}`);
+        // }
+
+
     </script>
 </head>
 
@@ -41,7 +82,7 @@
     || OR
     ! NOT -->
 
-    <!-- expression1 && expression2 = [both are equal]
+    <!-- expression1 && expression2 = true [both are true]
     expression1 || expression2 = true [any one is true]
     !true = false -->
 
@@ -49,15 +90,55 @@
     <!-- 1. Add a new file into data folder as "users.json"
     2. Add a login screen in "login.html" -->
 
-    <!-- Ternary Operator -->
+    <!-- Special Operators in JavaScript -->
+    <!-- 1.Ternary Operator -->
+
     <!-- Syntax:
     (condition)? statement if true : statement if false -->
 
-    <!-- Ex3:
-    (btnText=="show")?"Hide":"Show"; -->
+    <!-- Ex1: -->
+    <!-- (btnText=="show")?"Hide":"Show"; -->
 
-    <!-- Ex4: -->
-    <input onchange="StockToggle()" type="checkbox" checked id="Stock"><span id="msg">Available</span>
+    <!-- Ex2: -->
+    <!-- <input onchange="StockToggle()" type="checkbox" checked id="Stock"><span id="msg">Available</span> -->
+
+    <!-- 2.typeof
+    It is used to know the data type of any value stored in a reference. -->
+
+    <!-- Syntax:
+    typeof variableName;
+    typeof property; -->
+
+    <!-- 3.instanceof
+    It is used to know the class from where the object is derived. -->
+
+    <!-- Syntax:
+    objectName instanceof className; -->
+
+    <!-- delete
+    It is used to remove any property from object.
+    We cannot delete readonly properties. -->
+
+    <!-- Syntax:
+    delete object.Property; -->
+
+    <!-- in
+    It is a special operator used to check for any property in object. -->
+
+    <!-- Syntax:
+    "Property" in Object; //true-false -->
+
+    <!-- of
+    It is used to verify every value in collection.
+    It is used with for...iterator -->
+
+    <!-- Syntax:
+    for(var item of collection){
+
+    }
+    for(var item in object){
+
+    } -->
 
 </body>
 

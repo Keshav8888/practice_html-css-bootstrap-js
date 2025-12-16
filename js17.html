@@ -1,75 +1,458 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Switch Selector -->
+     Switch is used to control the flow of electrons.
+     Switches are various types:
+     a)push button switch
+     b)toggle switch
+
+
+     <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verify Mobile</title>
+    <title>JavaScript Operators1</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script>
-        var flag = "";
-        var regExp;
-        var placeholder = "";
-        function CountryChanged() {
+        // Ex1:
+        // function LoadProducts(id) {
+        //     fetch(`https://fakestoreapi.com/products/${id}`)
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (data) {
+        //             document.getElementById("pic").src = data.image;
+        //             document.getElementById("title").innerHTML = data.title;
+        //             document.getElementById("price").innerHTML = "&#8377;" + data.price;
+        //             document.getElementById("rating").innerHTML = data.rating.rate + "<span class='bi bi-star-fill text-success'></span>";
+        //         })
+        // }
+        // function bodyload() {
+        //     LoadProducts(1);
+        // }
+        // var productId = 1;
+        // function NextClick() {
+        //     productId++;
+        //     LoadProducts(productId);
+        // }
+        // function PreviousClick() {
+        //     productId--;
+        //     LoadProducts(productId);
+        // }
+        // function StartShow() {
+        //     productId++;
+        //     LoadProducts(productId);
+        // }
+        // var show;
+        // function PlayClick() {
+        //     show = setInterval(StartShow, 3000);
+        //     document.getElementById("status").innerHTML = "Slide Show - Started";
+        // }
+        // function PauseClick() {
+        //     clearInterval(show);
+        //     document.getElementById("status").innerHTML = "Slide Show - Paused";
+        // }
 
-            var countryname = document.getElementById("1stCountry").value;
-            switch (countryname) {
-                case "India":
-                    flag = "./images/india_flag.avif";
-                    regExp = /\+91\d{10}/;
-                    placeholder = "India Calling Code : +91 and number 10 digits";
-                    break;
-                case "US":
-                    flag = "./images/us_flag.webp";
-                    regExp = /\+1\d{6}/;
-                    placeholder = "US Calling Code : +1 and number 6 digits";
-                    break;
-                case "UK":
-                    flag = "./images/uk_flag.webp";
-                    regExp = /\+44\d{8}/;
-                    placeholder = "UK Calling Code : +44 and number 8 digits";
-                    break;
-                default:
-                    flag = "";
-                    placeholder = "Please Select your country";
-                    break;
-            }
-            document.getElementById("flag").src = flag;
-            document.getElementById("txtMobile").placeholder = placeholder;
-        }
-        function VerifyClick() {
-            var mobile = document.getElementById("txtMobile").value;
-            var msg = document.getElementById("msg");
-            if (mobile.match(regExp)) {
-                document.write("Registered successfully..");
-            } else {
-                msg.innerHTML = `Invalid Mobile <br> ${ placeholder }`.fontcolor('red');
-            }
+
+        // Ex: % operator (Validation)
+        // function VerifyNumber(){
+        //     var n=parseInt(document.getElementById("txtEven").value);
+        //     var msg=document.getElementById("msg");
+        //     if(n%2==0){
+        //         msg.innerHTML="You entered Even Number";
+        //     }else{
+        //         msg.innerHTML="Not an Even Number".fontcolor('red');
+        //     }
+        // }
+
+
+        // Ex2:
+        function AddClick() {
+            var folderName = prompt("Enter Name:");
+            document.querySelector("p").innerHTML += `Folder Created:${folderName} <br>`;
         }
     </script>
+
+    <style>
+        /* Ex1: */
+        /* #price {
+            position: fixed;
+            top: 200px;
+            right: 270px;
+            font-size: 25px;
+            font-weight: bold;
+            border: 2px solid black;
+            background-color: yellow;
+            padding: 5px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        } */
+    </style>
+
 </head>
 
-<body class="container-fluid">
-    <h2>Verify Mobile</h2>
-    <dl>
-        <dt>Select Country</dt>
-        <dd class="input-group">
-            <select onchange="CountryChanged()" id="1stCountry" class="form-select">
-                <option>Select Your Country</option>
-                <option>India</option>
-                <option>US</option>
-                <option>UK</option>
-            </select>
-            <img id="flag" width="50" height="40">
-        </dd>
-        <dt>Your Mobile</dt>
-        <dd>
-            <input type="text" class="form-control" id="txtMobile">
-        </dd>
-    </dl>
-    <button onclick="VerifyClick()" class="btn btn-primary">Verify</button>
-    <h3 id="msg" align="center"></h3>
-    
+<body onload="bodyload()" class="container-fluid">
+
+    <!-- Operator is an object that evaluates a value -->
+    <!-- Operator keeps data in operands -->
+    <!-- Operator defines functionality using entity "+ , - , * , /" -->
+    <!-- x + y, x and y are operands -->
+
+    <!-- Based on how many operands an operator can handle, the operators are classified into-
+    a) Unary - one operand   x++
+    b) Binary - two operands   x/y+z
+    c) Ternary - three operands   (operand1) ? operand2 : operand3
+    Ternary Operator: "?:"
+    (condition) ? true : false; -->
+
+    <!-- Operators are further classified into various types based on the type of value they return.
+    1. Arithmetic Operators
+    2. Assignment Operators
+    3. Conditional Operators
+    4. Logical Operators
+    5. Special Operators -->
+
+    <!-- Arithmetic Operators: They always return a number.
+    + Addition
+    - Substraction
+    * Multiplication
+    / Division
+    % Modulus Division
+    ** Exponent      2**3=Math.pow(2,3)= 8
+    ++ Increment
+    -- Decrement -->
+
+    <!-- Math.pi
+    Math.cos
+    Math.sqrt -->
+
+    <!-- Addition(+): used for finding the sum of value.
+    string + string = string
+    string + number = string
+    number + number = number
+    number + boolean = number
+    string + boolean = string
+    boolean + boolean = number -->
+
+    <!-- Substraction(-): used for finding difference value.
+    string - string = NaN
+    string - number = NaN
+    number - number = number
+    number - boolean = number
+    boolean - boolean = number -->
+
+    <!-- Multiplication(*): used to find the product of given numbers.
+    string * string = NaN -->
+
+    <!-- Increment(++)
+    x++ : x=x+1; -->
+
+    <!-- Decrement(--)
+    x-- : x=x-1; -->
+
+    <!-- Post Increment(x++)
+    x=10;
+    y=x++;      x=11,y=10 -->
+
+    <!-- Pre Increment(++x)
+    x=10;
+    y=++x;      x=11,y=11 -->
+
+    <!-- Post Decrement(x--)
+    x=10;
+    y=x--;    x=9,y=10 -->
+
+    <!-- Pre Decrement(--x)
+    x=10;
+    y=--x;    x=9,y=9 -->
+
+    <!-- Ex1: -->
+    <!-- <div class="d-flex justify-content-center align-items-center">
+        <div class="card mt-4 p-2" style="width: 350px;">
+            <div class="card-header text-center">
+                <button onclick="PlayClick()" class="btn btn-danger">
+                    <span class="bi bi-play"></span>
+                </button>
+                <button onclick="PauseClick()" class="btn btn-danger">
+                    <span class="bi bi-pause"></span>
+                </button>
+                <p id="status"></p>
+            </div>
+            <img id="pic" height="200" class="card-img-top">
+            <div class="card-header text-center" style="height:160px">
+                <p id="title"></p>
+            </div>
+            <div class="card-body">
+                <p id="price"></p>
+                <p id="rating"></p>
+            </div>
+            <div class="card-footer text-center">
+                <button onclick="PreviousClick()" class="btn btn-danger">
+                    <span class="bi bi-chevron-left"></span>
+                </button>
+                <button onclick="NextClick()" class="btn btn-danger">
+                    <span class="bi bi-chevron-right"></span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Ex: % operator (Validation) -->
+    <!-- <fieldset>
+        <legend>Enter an Even Number:</legend>
+        <div>
+            <input onblur="VerifyNumber()" type="text" id="txtEven">
+            <div id="msg"></div>
+        </div>
+     </fieldset> -->
+
+    <!-- Comparison Operators 
+    ==  Equal
+    ===  Identical Equal
+    !=  Not Equal
+    !==  Not Identical
+    >  Greater than
+    >=  Greater than or Equal
+    <  Less than
+    <=  Lesser than or Equal  -->
+
+    <!-- difference between "==" and "==="
+    == can compare 2 values of various types
+    var x="10";  string
+    var y=10;  number
+    x==y  true
+    x===y  false -->
+    <!-- === can compare 2 values of same type only -->
+
+    <!-- Assignment Operators
+    +=  Add and Assign
+    -=
+    *=
+    /=
+    **=
+    %= -->
+    <!-- Ex2: -->
+    <button onclick="AddClick()">Add Folder</button>
+    <p></p>
+    <!-- Ex3: -->
+    <!-- KFC Food Ordering Menu(in js14.html) -->
+
+
 </body>
 
+</html>
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Date Type</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+
+        //  var mfd=new Date(); //loads current system date and time
+        //  var mfd=new Date("YY-MM-DD"); 
+        // Ex:
+        // var Name = "Samsung TV";
+        // var Price = 60000;
+        // var Manufactured = new Date("2025-11-20 05:08:34");
+        // document.write(Name + "<br>" + Price + "<br>" + Manufactured);
+
+        // Date Methods
+        // getHours(): 0 - 23
+        // getMinutes(): 0 - 59
+        // getSeconds(): 0 - 59
+        // getMiliSeconds(): 0 - 99
+        // getDay(): Weekday number 0 = Sunday
+        // getDate(): Date number - 22
+        // getMonth(): Month number 2022
+        // getFullYear(): Year number 2022
+        // toLocaleDateString(): Short Date
+        // toLocaleTimeString(): Short Time
+        // Ex:
+        // var Name = "Samsung TV";
+        // var Price = 60000;
+        // var Manufactured = new Date("2025-03-20 05:25:34");
+        // var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
+        // var months = ["January", "February", "March"];
+        // document.write(`
+        // Weekday:${days, [Manufactured.getDay()]}<br>
+        // Month:${months[Manufactured.getMonth()]}<br>
+        // Date:${Manufactured.getDate()}<br>
+        // Year:${Manufactured.getFullYear()}<br>
+        // Date:${Manufactured.getDay()},${Manufactured.getDate()}-${months[Manufactured.getMonth()]}-${Manufactured.getFullYear()}
+        // `)
+
+
+        // Date Set Methods
+        // setHours()
+        // setMinutes()
+        // setSeconds()
+        // setMilliSeconds()
+        // setDate()
+        // setMonth()
+        // setYear()
+        // Ex:
+        // var mfd=new Date("2022-08-28");
+        // mfd.setDate(20);
+        // document.write(mfd.toLocaleDateString());
+
+        // Displaying current date-time
+        // function ShowDate() {
+        //     var now = new Date();
+        //     var days = ["Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday", "Sunday"];
+        //     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        //     document.getElementById("date").innerHTML = `${days[now.getDay()]} 
+        //     ${now.getDate()}
+        //     ${months[now.getMonth()]},
+        //     ${now.getFullYear()};`
+        // }
+        // function ShowTime() {
+        //     var now = new Date();
+        //     document.getElementById("time").innerHTML = now.toLocaleTimeString();
+        // }
+        // function ShowMessage() {
+        //     var now = new Date();
+        //     var hrs = now.getHours();
+        //     var msg = document.getElementById("msg");
+        //     var icon = document.getElementById("icon");
+        //     if (hrs >= 0 && hrs <= 12) {
+        //         msg.innerHTML = "Good Morning";
+        //         icon.className = "bi bi-brightness-alt-high";
+        //     } else if (hrs > 12 && hrs <= 17) {
+        //         msg.innerHTML = "Good Afternoon";
+        //         icon.className = "bi bi-brightness-high";
+        //     } else if (hrs > 17 && hrs <= 23) {
+        //         msg.innerHTML = "Good Evening";
+        //         icon.className = "bi bi-sun-fill";
+        //     }
+        // }
+        // function bodyload() {
+        //     ShowDate();
+        //     setInterval(ShowTime, 1000);
+        //     ShowMessage();
+        // }
+
+        
+
+    </script>
+
+    
+</head>
+
+<body onload="bodyload()" class="container-fluid">
+    <!-- JavaScript Date Type -->
+    <!-- JavaScript date values are stored by using "Date()" constructor -->
+    <!-- It allocates memory for storing a date type of value -->
+
+
+    <!-- Displaying current date-time -->
+    <!-- <div class="btn-toolbar bg-danger mt-2 justify-content-between">
+        <div class="btn-group">
+            <button class="btn btn-danger">Home</button>
+            <button class="btn btn-danger">Electronics</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-danger">
+                <span id="icon"></span>
+                <span id="msg"></span>
+            </button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-danger"><span id="date"></span></button>
+            <button class="btn btn-danger"><span id="time"></span></button>
+        </div>
+    </div> -->
+
+    
+
+
+</body>
+
+</html>
+     <!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Checker</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+        function Captcha() {
+            var a = Math.random() * 10;
+            var b = Math.random() * 10;
+            var c = Math.random() * 10;
+            var d = Math.random() * 10;
+            var e = Math.random() * 10;
+            var f = Math.random() * 10;
+            return `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)} ${Math.round(f)}`;
+        }
+        function LoginClick() {
+            var username = document.getElementById("UserName").value;
+            var password = document.getElementById("Password").value;
+            var msg = document.getElementById("msg");
+
+            fetch("../data/users.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (users) {
+                    for (var user of users) {
+                        if (user.UserName == username && user.Password == password) {
+                            document.write("<h2>Login Success</h2>");
+                        } else {
+                            msg.innerHTML = "Invalid User Name/Password";
+                        }
+                    }
+                })
+        }
+        function bodyload() {
+            document.getElementById("code").innerHTML = Captcha();
+        }
+        function GetNewCode() {
+            document.getElementById("code").innerHTML = Captcha();
+        }
+    </script>
+
+    <style>
+        dd {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body onload="bodyload()">
+    <fieldset>
+        <legend>User Login</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" id="UserName"></dd>
+            <dt>Password</dt>
+            <dd><input type="password" id="Password"></dd>
+            <dt>Verify Code <button onclick="GetNewCode()"><span class="bi bi-arrow-clockwise"></span></button></dt>
+            <dd id="code"></dd>
+            <dd><input type="text" size="6"></dd>
+        </dl>
+        <button onclick="LoginClick()">Login</button>
+    </fieldset>
+    <h2 id="msg" align="center"></h2>
+
+</body>
+
+</html> -->
+</body>
 </html>

@@ -1,458 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!-- Switch Selector -->
-     Switch is used to control the flow of electrons.
-     Switches are various types:
-     a)push button switch
-     b)toggle switch
-
-
-     <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Operators1</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <script>
-        // Ex1:
-        // function LoadProducts(id) {
-        //     fetch(`https://fakestoreapi.com/products/${id}`)
-        //         .then(function (response) {
-        //             return response.json();
-        //         })
-        //         .then(function (data) {
-        //             document.getElementById("pic").src = data.image;
-        //             document.getElementById("title").innerHTML = data.title;
-        //             document.getElementById("price").innerHTML = "&#8377;" + data.price;
-        //             document.getElementById("rating").innerHTML = data.rating.rate + "<span class='bi bi-star-fill text-success'></span>";
-        //         })
-        // }
-        // function bodyload() {
-        //     LoadProducts(1);
-        // }
-        // var productId = 1;
-        // function NextClick() {
-        //     productId++;
-        //     LoadProducts(productId);
-        // }
-        // function PreviousClick() {
-        //     productId--;
-        //     LoadProducts(productId);
-        // }
-        // function StartShow() {
-        //     productId++;
-        //     LoadProducts(productId);
-        // }
-        // var show;
-        // function PlayClick() {
-        //     show = setInterval(StartShow, 3000);
-        //     document.getElementById("status").innerHTML = "Slide Show - Started";
-        // }
-        // function PauseClick() {
-        //     clearInterval(show);
-        //     document.getElementById("status").innerHTML = "Slide Show - Paused";
-        // }
-
-
-        // Ex: % operator (Validation)
-        // function VerifyNumber(){
-        //     var n=parseInt(document.getElementById("txtEven").value);
-        //     var msg=document.getElementById("msg");
-        //     if(n%2==0){
-        //         msg.innerHTML="You entered Even Number";
-        //     }else{
-        //         msg.innerHTML="Not an Even Number".fontcolor('red');
-        //     }
-        // }
-
-
-        // Ex2:
-        function AddClick() {
-            var folderName = prompt("Enter Name:");
-            document.querySelector("p").innerHTML += `Folder Created:${folderName} <br>`;
-        }
-    </script>
-
-    <style>
-        /* Ex1: */
-        /* #price {
-            position: fixed;
-            top: 200px;
-            right: 270px;
-            font-size: 25px;
-            font-weight: bold;
-            border: 2px solid black;
-            background-color: yellow;
-            padding: 5px;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-        } */
-    </style>
-
-</head>
-
-<body onload="bodyload()" class="container-fluid">
-
-    <!-- Operator is an object that evaluates a value -->
-    <!-- Operator keeps data in operands -->
-    <!-- Operator defines functionality using entity "+ , - , * , /" -->
-    <!-- x + y, x and y are operands -->
-
-    <!-- Based on how many operands an operator can handle, the operators are classified into-
-    a) Unary - one operand   x++
-    b) Binary - two operands   x/y+z
-    c) Ternary - three operands   (operand1) ? operand2 : operand3
-    Ternary Operator: "?:"
-    (condition) ? true : false; -->
-
-    <!-- Operators are further classified into various types based on the type of value they return.
-    1. Arithmetic Operators
-    2. Assignment Operators
-    3. Conditional Operators
-    4. Logical Operators
-    5. Special Operators -->
-
-    <!-- Arithmetic Operators: They always return a number.
-    + Addition
-    - Substraction
-    * Multiplication
-    / Division
-    % Modulus Division
-    ** Exponent      2**3=Math.pow(2,3)= 8
-    ++ Increment
-    -- Decrement -->
-
-    <!-- Math.pi
-    Math.cos
-    Math.sqrt -->
-
-    <!-- Addition(+): used for finding the sum of value.
-    string + string = string
-    string + number = string
-    number + number = number
-    number + boolean = number
-    string + boolean = string
-    boolean + boolean = number -->
-
-    <!-- Substraction(-): used for finding difference value.
-    string - string = NaN
-    string - number = NaN
-    number - number = number
-    number - boolean = number
-    boolean - boolean = number -->
-
-    <!-- Multiplication(*): used to find the product of given numbers.
-    string * string = NaN -->
-
-    <!-- Increment(++)
-    x++ : x=x+1; -->
-
-    <!-- Decrement(--)
-    x-- : x=x-1; -->
-
-    <!-- Post Increment(x++)
-    x=10;
-    y=x++;      x=11,y=10 -->
-
-    <!-- Pre Increment(++x)
-    x=10;
-    y=++x;      x=11,y=11 -->
-
-    <!-- Post Decrement(x--)
-    x=10;
-    y=x--;    x=9,y=10 -->
-
-    <!-- Pre Decrement(--x)
-    x=10;
-    y=--x;    x=9,y=9 -->
-
-    <!-- Ex1: -->
-    <!-- <div class="d-flex justify-content-center align-items-center">
-        <div class="card mt-4 p-2" style="width: 350px;">
-            <div class="card-header text-center">
-                <button onclick="PlayClick()" class="btn btn-danger">
-                    <span class="bi bi-play"></span>
-                </button>
-                <button onclick="PauseClick()" class="btn btn-danger">
-                    <span class="bi bi-pause"></span>
-                </button>
-                <p id="status"></p>
-            </div>
-            <img id="pic" height="200" class="card-img-top">
-            <div class="card-header text-center" style="height:160px">
-                <p id="title"></p>
-            </div>
-            <div class="card-body">
-                <p id="price"></p>
-                <p id="rating"></p>
-            </div>
-            <div class="card-footer text-center">
-                <button onclick="PreviousClick()" class="btn btn-danger">
-                    <span class="bi bi-chevron-left"></span>
-                </button>
-                <button onclick="NextClick()" class="btn btn-danger">
-                    <span class="bi bi-chevron-right"></span>
-                </button>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- Ex: % operator (Validation) -->
-    <!-- <fieldset>
-        <legend>Enter an Even Number:</legend>
-        <div>
-            <input onblur="VerifyNumber()" type="text" id="txtEven">
-            <div id="msg"></div>
-        </div>
-     </fieldset> -->
-
-    <!-- Comparison Operators 
-    ==  Equal
-    ===  Identical Equal
-    !=  Not Equal
-    !==  Not Identical
-    >  Greater than
-    >=  Greater than or Equal
-    <  Less than
-    <=  Lesser than or Equal  -->
-
-    <!-- difference between "==" and "==="
-    == can compare 2 values of various types
-    var x="10";  string
-    var y=10;  number
-    x==y  true
-    x===y  false -->
-    <!-- === can compare 2 values of same type only -->
-
-    <!-- Assignment Operators
-    +=  Add and Assign
-    -=
-    *=
-    /=
-    **=
-    %= -->
-    <!-- Ex2: -->
-    <button onclick="AddClick()">Add Folder</button>
-    <p></p>
-    <!-- Ex3: -->
-    <!-- KFC Food Ordering Menu(in js14.html) -->
-
-
-</body>
-
-</html>
-     <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Date Type</title>
+    <title>Switch Selector</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
 
     <script>
-
-        //  var mfd=new Date(); //loads current system date and time
-        //  var mfd=new Date("YY-MM-DD"); 
-        // Ex:
-        // var Name = "Samsung TV";
-        // var Price = 60000;
-        // var Manufactured = new Date("2025-11-20 05:08:34");
-        // document.write(Name + "<br>" + Price + "<br>" + Manufactured);
-
-        // Date Methods
-        // getHours(): 0 - 23
-        // getMinutes(): 0 - 59
-        // getSeconds(): 0 - 59
-        // getMiliSeconds(): 0 - 99
-        // getDay(): Weekday number 0 = Sunday
-        // getDate(): Date number - 22
-        // getMonth(): Month number 2022
-        // getFullYear(): Year number 2022
-        // toLocaleDateString(): Short Date
-        // toLocaleTimeString(): Short Time
-        // Ex:
-        // var Name = "Samsung TV";
-        // var Price = 60000;
-        // var Manufactured = new Date("2025-03-20 05:25:34");
-        // var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday"];
-        // var months = ["January", "February", "March"];
-        // document.write(`
-        // Weekday:${days, [Manufactured.getDay()]}<br>
-        // Month:${months[Manufactured.getMonth()]}<br>
-        // Date:${Manufactured.getDate()}<br>
-        // Year:${Manufactured.getFullYear()}<br>
-        // Date:${Manufactured.getDay()},${Manufactured.getDate()}-${months[Manufactured.getMonth()]}-${Manufactured.getFullYear()}
-        // `)
-
-
-        // Date Set Methods
-        // setHours()
-        // setMinutes()
-        // setSeconds()
-        // setMilliSeconds()
-        // setDate()
-        // setMonth()
-        // setYear()
-        // Ex:
-        // var mfd=new Date("2022-08-28");
-        // mfd.setDate(20);
-        // document.write(mfd.toLocaleDateString());
-
-        // Displaying current date-time
-        // function ShowDate() {
-        //     var now = new Date();
-        //     var days = ["Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday", "Sunday"];
-        //     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        //     document.getElementById("date").innerHTML = `${days[now.getDay()]} 
-        //     ${now.getDate()}
-        //     ${months[now.getMonth()]},
-        //     ${now.getFullYear()};`
+        // Ex1:Switch Selector
+        // var x = 3;
+        // switch (x) {
+        //     case 1:
+        //         document.write("One");
+        //         break;
+        //     case 2:
+        //         document.write("Two");
+        //         break;
+        //     case 3:
+        //         document.write("Three");
+        //         break;
+        //     default:
+        //         document.write("Please enter 1 to 3:");
+        //         break;
         // }
-        // function ShowTime() {
-        //     var now = new Date();
-        //     document.getElementById("time").innerHTML = now.toLocaleTimeString();
-        // }
-        // function ShowMessage() {
-        //     var now = new Date();
-        //     var hrs = now.getHours();
-        //     var msg = document.getElementById("msg");
-        //     var icon = document.getElementById("icon");
-        //     if (hrs >= 0 && hrs <= 12) {
-        //         msg.innerHTML = "Good Morning";
-        //         icon.className = "bi bi-brightness-alt-high";
-        //     } else if (hrs > 12 && hrs <= 17) {
-        //         msg.innerHTML = "Good Afternoon";
-        //         icon.className = "bi bi-brightness-high";
-        //     } else if (hrs > 17 && hrs <= 23) {
-        //         msg.innerHTML = "Good Evening";
-        //         icon.className = "bi bi-sun-fill";
+
+        // Ex1:break and return
+        // function F1() {
+        //     var x = 2;
+        //     switch (x) {
+        //         case 1:
+        //             document.write("One");
+        //             break;
+        //         case 2:
+        //             document.write("Two");
+        //             return;
+        //         case 3:
+        //             document.write("Three");
+        //             break;
+        //         default:
+        //             document.write("Please enter 1 to 3:");
+        //             break;
         //     }
         // }
-        // function bodyload() {
-        //     ShowDate();
-        //     setInterval(ShowTime, 1000);
-        //     ShowMessage();
+        // F1();
+
+        // Ex1:capilatlization(using multiple cases)
+        // var choice = "N";
+        // switch (choice) {
+        //     case "y":
+        //     case "Y":
+        //         document.write("You selected Yes.");
+        //         break;
+        //     case "n":
+        //     case "N":
+        //         document.write("You selected No.");
+        //         break;
+        //     default:
+        //         document.write("Please enter only y or n:");
+        //         break;
         // }
 
-        
+        // Ex2:capilatlization(after converting the case)
+        // var choice = "NO";
+        // switch (choice.toLowerCase()) {
+        //     case "yes":
+        //         document.write("You selected Yes.");
+        //         break;
+        //     case "no":
+        //         document.write("You selected No.");
+        //         break;
+        //     default:
+        //         document.write("Please enter only yes or no");
+        //         break;
+        // }
 
-    </script>
+        // Ex3:capilatlization
+        // var Name = prompt("Enter Product Name:");
+        // switch (Name.toLowerCase()) {
+        //     case "apple":
+        //     case "grape":
+        //         document.write(`Your Product ${Name} belongs to Fruits`);
+        //         break;
+        //     case "mobile":
+        //     case "tv":
+        //         document.write(`Your Product ${Name} belongs to Electronics`);
+        //         break;
+        //     default:
+        //         document.write("Please enter any Electronics or Fruit Name");
+        //         break;
+        // }
 
-    
-</head>
+        // Ex1:case for range of values
+        // function CityChanged() {
+        //     var cityname = document.getElementById("1stCities").value;
+        //     var status = "";
+        //     switch (cityname) {
+        //         case "Delhi":
+        //             status = `Delivery for your ${cityname} will be in 2 days`;
+        //             break;
+        //         case "Hyderabad":
+        //             status = `Delivery for your ${cityname} - Same day`;
+        //             break;
+        //         default: 
+        //             status = `Please Select your city`;
+        //             break;
+        //     }
+        //     document.getElementById("msg").innerHTML = status;
+        // }
 
-<body onload="bodyload()" class="container-fluid">
-    <!-- JavaScript Date Type -->
-    <!-- JavaScript date values are stored by using "Date()" constructor -->
-    <!-- It allocates memory for storing a date type of value -->
+        // Ex1:cascading dropdown
+        var categories = ["Select a Category", "Electronics", "Footwear", "Fashion"];
+        var electronics = ["Select Electronics", "Sony Speaker", "Neckband"];
+        var footwear = ["Select Footwear", "Nike Casuals", "Lee Boot"];
+        var fashion = ["Select Fashion", "Winter Jacket", "Backpack"];
+        var products = [];
 
+        var data = [
+            { Name: "Sony Speaker", Price: 4500, Photo: "../images/speaker.jpeg" },
+            { Name: "Neckband", Price: 6200, Photo: "../images/neckband.jpg" },
+            { Name: "Nike Casuals", Price: 7000, Photo: "../images/shoe.jpeg" },
+            { Name: "Lee Boot", Price: 2300, Photo: "../images/shoe1.jpg" },
+            { Name: "Winter Jacket", Price: 2500, Photo: "../images/jacket.jpg" },
+            { Name: "Backpack", Price: 3500, Photo: "../images/backpack.webp" },
 
-    <!-- Displaying current date-time -->
-    <!-- <div class="btn-toolbar bg-danger mt-2 justify-content-between">
-        <div class="btn-group">
-            <button class="btn btn-danger">Home</button>
-            <button class="btn btn-danger">Electronics</button>
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-danger">
-                <span id="icon"></span>
-                <span id="msg"></span>
-            </button>
-        </div>
-        <div class="btn-group">
-            <button class="btn btn-danger"><span id="date"></span></button>
-            <button class="btn btn-danger"><span id="time"></span></button>
-        </div>
-    </div> -->
+        ];
 
-    
-
-
-</body>
-
-</html>
-     <!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Password Checker</title>
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-
-    <script>
-        function Captcha() {
-            var a = Math.random() * 10;
-            var b = Math.random() * 10;
-            var c = Math.random() * 10;
-            var d = Math.random() * 10;
-            var e = Math.random() * 10;
-            var f = Math.random() * 10;
-            return `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)} ${Math.round(f)}`;
+        function LoadProducts() {
+            document.getElementById("lstProducts").innerHTML = "";
+            for (var item of products) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("lstProducts").appendChild(option);
+            }
         }
-        function LoginClick() {
-            var username = document.getElementById("UserName").value;
-            var password = document.getElementById("Password").value;
-            var msg = document.getElementById("msg");
 
-            fetch("../data/users.json")
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (users) {
-                    for (var user of users) {
-                        if (user.UserName == username && user.Password == password) {
-                            document.write("<h2>Login Success</h2>");
-                        } else {
-                            msg.innerHTML = "Invalid User Name/Password";
-                        }
-                    }
-                })
+        function LoadCategories() {
+            for (var item of categories) {
+                var option = document.createElement("option");
+                option.text = item;
+                option.value = item;
+                document.getElementById("lstCategories").appendChild(option);
+            }
         }
         function bodyload() {
-            document.getElementById("code").innerHTML = Captcha();
+            LoadCategories();
+            GetCartCount();
         }
-        function GetNewCode() {
-            document.getElementById("code").innerHTML = Captcha();
+        function CategoryChanged() {
+            var categoryname = document.getElementById("lstCategories").value;
+            switch (categoryname) {
+                case "Electronics":
+                    products = electronics;
+                    LoadProducts();
+                    break;
+                case "Footwear":
+                    products = footwear;
+                    LoadProducts();
+                    break;
+                case "Fashion":
+                    products = fashion;
+                    LoadProducts();
+                    break;
+                default:
+                    products = ["Please Select Category"];
+                    LoadProducts();
+                    break;
+            }
+        }
+        var searchedProduct;
+        function ProductChanged() {
+            var productname = document.getElementById("lstProducts").value;
+            searchedProduct = data.find(function (product) {
+                return product.Name == productname;
+            });
+            document.getElementById("pic").src = searchedProduct.Photo;
+            document.getElementById("productName").innerHTML = searchedProduct.Name;
+            document.getElementById("productPrice").innerHTML = searchedProduct.Price;
+        }
+        var cartItems = [];
+        function GetCartCount() {
+            document.getElementById("count").innerHTML = cartItems.length;
+        }
+        function AddToCartClick() {
+            cartItems.push(searchedProduct);
+            alert("Item Added to Cart");
+            GetCartCount();
+        }
+        function ShowCartClick() {
+            document.getElementById("cart").style.display = "block";
+            document.querySelector("tbody").innerHTML = "";
+            for (var item of cartItems) {
+                var tr = document.createElement("tr");
+                var tdName = document.createElement("td");
+                var tdPrice = document.createElement("td");
+                var tdPhoto = document.createElement("td");
+
+                tdName.innerHTML = item.Name;
+                tdPrice.innerHTML = item.Price;
+
+                var img = document.createElement("img");
+                img.src = item.Photo;
+                img.width = "50";
+                img.height = "50";
+
+                tdPhoto.appendChild(img);
+
+                tr.appendChild(tdName);
+                tr.appendChild(tdPrice);
+                tr.appendChild(tdPhoto);
+
+                document.querySelector("tbody").appendChild(tr);
+            }
         }
     </script>
-
-    <style>
-        dd {
-            margin-bottom: 10px;
-        }
-    </style>
 </head>
 
-<body onload="bodyload()">
-    <fieldset>
-        <legend>User Login</legend>
-        <dl>
-            <dt>User Name</dt>
-            <dd><input type="text" id="UserName"></dd>
-            <dt>Password</dt>
-            <dd><input type="password" id="Password"></dd>
-            <dt>Verify Code <button onclick="GetNewCode()"><span class="bi bi-arrow-clockwise"></span></button></dt>
-            <dd id="code"></dd>
-            <dd><input type="text" size="6"></dd>
-        </dl>
-        <button onclick="LoginClick()">Login</button>
+<body class="container-fluid" onload="bodyload()">
+    <!-- Switch Selector
+    Switch is used to control the flow of electrons.
+    Switches are various types:
+    a)push button switch
+    b)toggle switch
+    c)selector switch
+    d)joystick switch etc..
+
+    Selector switch contains multiple cases,it executes only the block that is matching with the condition. -->
+
+    <!-- Syntax:
+    switch(value)
+    {
+        case value;
+        statements;
+        jump;
+        default
+            statements to execute when case is not matching;
+        jump;
+    } -->
+
+    <!-- FAQ'S: -->
+    <!-- 1. IF case is matching at multiple cases,which case it executes?
+    Ans- Only first.
+    switch(2){
+    case 2:
+    statement;
+    break;
+    case 2:
+    statement;
+    break;
+    } -->
+
+    <!-- 2. Can we define switch without default?
+    Ans- Yes -->
+
+    <!-- 3. Can we define default before or between case?
+    Ans- Yes -->
+
+    <!-- 4. Can we define case without break?
+    Ans- Yes.It will stop at next break or at the end of switch. -->
+
+    <!-- 5. Can we use return as jump statement?
+    Ans- Yes -->
+
+    <!-- 6. What is difference between break and return?
+    Ans- break will exit the block but still stays inside function.
+    return will exit the function and stops the script. -->
+
+    <!-- 7. Can we defined any another data type for case value?What is the data type supported for case value?
+    Ans- number,string,boolean,expression
+    case 1-number
+    case "A"-string
+    case true=boolean
+    case expression-returns number,string,boolean -->
+
+    <!-- 8. Can we define string as case value?
+    Ans- Yes.But case sensitive -->
+
+    <!-- 9. How to handle capilatlization for case?
+    Ans- You can use multiple cases for same set of statements.
+    (or)
+    You can convert the case. -->
+
+    <!-- 10. How to write case for range of values?
+    Ans- Case is defined by using boolean expression,but the case switch value must be "true". -->
+    <!-- Ex1: -->
+    <!-- <fieldset>
+        <legend>Your City</legend>
+        <select onchange="CityChanged()" id="1stCities">
+            <option>Select Your City</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+        </select>
     </fieldset>
-    <h2 id="msg" align="center"></h2>
+    <h2 id="msg" align="center"></h2> -->
+
+    <!-- FAQ: How to design cascading dropdown? -->
+    <!-- Ex1: -->
+    <header class="bg-danger text-white text-center p-2">
+        <h1> <span class="bi bi-cart"></span> Amazon Shopping</h1>
+    </header>
+    <section class="row">
+        <nav class="col-3">
+            <div class="mt-2">
+                <label class="form-label">Select Category</label>
+                <div>
+                    <select onchange="CategoryChanged()" id="lstCategories" class="form-select">
+
+                    </select>
+                </div>
+            </div>
+            <div class="mt-2">
+                <label class="form-label">Select Product</label>
+                <div>
+                    <select onchange="ProductChanged()" id="lstProducts" class="form-select">
+
+                    </select>
+                </div>
+            </div>
+            <div class="mt-2">
+                <label class="form-label">Preview</label>
+                <div class="card">
+                    <img id="pic" class="card-img-top" height="200">
+                </div>
+                <div class="card-header">
+                    <h2 id="productName"></h2>
+                    <p id="productPrice"></p>
+                </div>
+                <div class="card-footer">
+                    <button onclick="AddToCartClick()" class="btn btn-danger w-100">
+                        <span class="bi bi-cart4"></span>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main class="col-6">
+            <table id="cart" style="display: none;" class="table table-hover caption-top">
+                <caption>Your Cart Items</caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </main>
+        <aside class="col-3">
+            <div class="mt-2">
+                <button onclick="ShowCartClick()" class="btn btn-danger w-100">
+                    <span class="bi bi-cart"></span>
+                    [<span id="count"></span>]
+                    Your Cart Items
+                </button>
+            </div>
+        </aside>
+    </section>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
 
 </body>
 
-</html> -->
-</body>
 </html>

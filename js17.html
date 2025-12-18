@@ -111,108 +111,140 @@
         // }
 
         // Ex1:cascading dropdown
-        var categories = ["Select a Category", "Electronics", "Footwear", "Fashion"];
-        var electronics = ["Select Electronics", "Sony Speaker", "Neckband"];
-        var footwear = ["Select Footwear", "Nike Casuals", "Lee Boot"];
-        var fashion = ["Select Fashion", "Winter Jacket", "Backpack"];
-        var products = [];
+        // var categories = ["Select a Category", "Electronics", "Footwear", "Fashion"];
+        // var electronics = ["Select Electronics", "Sony Speaker", "Neckband"];
+        // var footwear = ["Select Footwear", "Nike Casuals", "Lee Boot"];
+        // var fashion = ["Select Fashion", "Winter Jacket", "Backpack"];
+        // var products = [];
+        // var data = [
+        //     { Name: "Sony Speaker", Price: 4500, Photo: "../images/speaker.jpeg" },
+        //     { Name: "Neckband", Price: 6200, Photo: "../images/neckband.jpg" },
+        //     { Name: "Nike Casuals", Price: 7000, Photo: "../images/shoe.jpeg" },
+        //     { Name: "Lee Boot", Price: 2300, Photo: "../images/shoe1.jpg" },
+        //     { Name: "Winter Jacket", Price: 2500, Photo: "../images/jacket.jpg" },
+        //     { Name: "Backpack", Price: 3500, Photo: "../images/backpack.webp" },
+        // ];
+        // function LoadProducts() {
+        //     document.getElementById("lstProducts").innerHTML = "";
+        //     for (var item of products) {
+        //         var option = document.createElement("option");
+        //         option.text = item;
+        //         option.value = item;
+        //         document.getElementById("lstProducts").appendChild(option);
+        //     }
+        // }
+        // function LoadCategories() {
+        //     for (var item of categories) {
+        //         var option = document.createElement("option");
+        //         option.text = item;
+        //         option.value = item;
+        //         document.getElementById("lstCategories").appendChild(option);
+        //     }
+        // }
+        // function bodyload() {
+        //     LoadCategories();
+        //     GetCartCount();
+        // }
+        // function CategoryChanged() {
+        //     var categoryname = document.getElementById("lstCategories").value;
+        //     switch (categoryname) {
+        //         case "Electronics":
+        //             products = electronics;
+        //             LoadProducts();
+        //             break;
+        //         case "Footwear":
+        //             products = footwear;
+        //             LoadProducts();
+        //             break;
+        //         case "Fashion":
+        //             products = fashion;
+        //             LoadProducts();
+        //             break;
+        //         default:
+        //             products = ["Please Select Category"];
+        //             LoadProducts();
+        //             break;
+        //     }
+        // }
+        // var searchedProduct;
+        // function ProductChanged() {
+        //     var productname = document.getElementById("lstProducts").value;
+        //     searchedProduct = data.find(function (product) {
+        //         return product.Name == productname;
+        //     });
+        //     document.getElementById("pic").src = searchedProduct.Photo;
+        //     document.getElementById("productName").innerHTML = searchedProduct.Name;
+        //     document.getElementById("productPrice").innerHTML = searchedProduct.Price;
+        // }
+        // var cartItems = [];
+        // function GetCartCount() {
+        //     document.getElementById("count").innerHTML = cartItems.length;
+        // }
+        // function AddToCartClick() {
+        //     cartItems.push(searchedProduct);
+        //     alert("Item Added to Cart");
+        //     GetCartCount();
+        // }
+        // function ShowCartClick() {
+        //     document.getElementById("cart").style.display = "block";
+        //     document.querySelector("tbody").innerHTML = "";
+        //     for (var item of cartItems) {
+        //         var tr = document.createElement("tr");
+        //         var tdName = document.createElement("td");
+        //         var tdPrice = document.createElement("td");
+        //         var tdPhoto = document.createElement("td");
+        //         tdName.innerHTML = item.Name;
+        //         tdPrice.innerHTML = item.Price;
+        //         var img = document.createElement("img");
+        //         img.src = item.Photo;
+        //         img.width = "50";
+        //         img.height = "50";
+        //         tdPhoto.appendChild(img);
+        //         tr.appendChild(tdName);
+        //         tr.appendChild(tdPrice);
+        //         tr.appendChild(tdPhoto);
+        //         document.querySelector("tbody").appendChild(tr);
+        //     }
+        // }
 
-        var data = [
-            { Name: "Sony Speaker", Price: 4500, Photo: "../images/speaker.jpeg" },
-            { Name: "Neckband", Price: 6200, Photo: "../images/neckband.jpg" },
-            { Name: "Nike Casuals", Price: 7000, Photo: "../images/shoe.jpeg" },
-            { Name: "Lee Boot", Price: 2300, Photo: "../images/shoe1.jpg" },
-            { Name: "Winter Jacket", Price: 2500, Photo: "../images/jacket.jpg" },
-            { Name: "Backpack", Price: 3500, Photo: "../images/backpack.webp" },
+        // Ex1:Switch Case
+        var flag = "";
+        var regExp;
+        var placeholder = "";
+        function CountryChanged() {
 
-        ];
-
-        function LoadProducts() {
-            document.getElementById("lstProducts").innerHTML = "";
-            for (var item of products) {
-                var option = document.createElement("option");
-                option.text = item;
-                option.value = item;
-                document.getElementById("lstProducts").appendChild(option);
-            }
-        }
-
-        function LoadCategories() {
-            for (var item of categories) {
-                var option = document.createElement("option");
-                option.text = item;
-                option.value = item;
-                document.getElementById("lstCategories").appendChild(option);
-            }
-        }
-        function bodyload() {
-            LoadCategories();
-            GetCartCount();
-        }
-        function CategoryChanged() {
-            var categoryname = document.getElementById("lstCategories").value;
-            switch (categoryname) {
-                case "Electronics":
-                    products = electronics;
-                    LoadProducts();
+            var countryname = document.getElementById("lstCountry").value;
+            switch (countryname) {
+                case "India":
+                    flag = "../images/india_flag.avif";
+                    regExp = /\+91\d{10}/;
+                    placeholder = "India Calling Code : +91 and number 10 digits";
                     break;
-                case "Footwear":
-                    products = footwear;
-                    LoadProducts();
+                case "US":
+                    flag = "../images/us_flag.webp";
+                    regExp = /\+1\d{6}/;
+                    placeholder = "US Calling Code : +1 and number 6 digits";
                     break;
-                case "Fashion":
-                    products = fashion;
-                    LoadProducts();
+                case "UK":
+                    flag = "../images/uk_flag.webp";
+                    regExp = /\+44\d{8}/;
+                    placeholder = "UK Calling Code : +44 and number 8 digits";
                     break;
                 default:
-                    products = ["Please Select Category"];
-                    LoadProducts();
+                    flag = "";
+                    placeholder = "Please Select your country";
                     break;
             }
+            document.getElementById("flag").src = flag;
+            document.getElementById("txtMobile").placeholder = placeholder;
         }
-        var searchedProduct;
-        function ProductChanged() {
-            var productname = document.getElementById("lstProducts").value;
-            searchedProduct = data.find(function (product) {
-                return product.Name == productname;
-            });
-            document.getElementById("pic").src = searchedProduct.Photo;
-            document.getElementById("productName").innerHTML = searchedProduct.Name;
-            document.getElementById("productPrice").innerHTML = searchedProduct.Price;
-        }
-        var cartItems = [];
-        function GetCartCount() {
-            document.getElementById("count").innerHTML = cartItems.length;
-        }
-        function AddToCartClick() {
-            cartItems.push(searchedProduct);
-            alert("Item Added to Cart");
-            GetCartCount();
-        }
-        function ShowCartClick() {
-            document.getElementById("cart").style.display = "block";
-            document.querySelector("tbody").innerHTML = "";
-            for (var item of cartItems) {
-                var tr = document.createElement("tr");
-                var tdName = document.createElement("td");
-                var tdPrice = document.createElement("td");
-                var tdPhoto = document.createElement("td");
-
-                tdName.innerHTML = item.Name;
-                tdPrice.innerHTML = item.Price;
-
-                var img = document.createElement("img");
-                img.src = item.Photo;
-                img.width = "50";
-                img.height = "50";
-
-                tdPhoto.appendChild(img);
-
-                tr.appendChild(tdName);
-                tr.appendChild(tdPrice);
-                tr.appendChild(tdPhoto);
-
-                document.querySelector("tbody").appendChild(tr);
+        function VerifyClick() {
+            var mobile = document.getElementById("txtMobile").value;
+            var msg = document.getElementById("msg");
+            if (mobile.match(regExp)) {
+                document.write("Registered successfully..");
+            } else {
+                msg.innerHTML = `Invalid Mobile <br> ${placeholder}`.fontcolor('red');
             }
         }
     </script>
@@ -298,7 +330,7 @@
 
     <!-- FAQ: How to design cascading dropdown? -->
     <!-- Ex1: -->
-    <header class="bg-danger text-white text-center p-2">
+    <!-- <header class="bg-danger text-white text-center p-2">
         <h1> <span class="bi bi-cart"></span> Amazon Shopping</h1>
     </header>
     <section class="row">
@@ -360,9 +392,33 @@
                 </button>
             </div>
         </aside>
-    </section>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </section> -->
+
+    <!-- Ex1:Switch Case -->
+    <h2>Verify Mobile</h2>
+    <dl>
+        <dt>Select Country</dt>
+        <dd class="input-group">
+            <select onchange="CountryChanged()" id="lstCountry" class="form-select">
+                <option>Select Your Country</option>
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+            </select>
+            <img id="flag" width="50" height="40">
+        </dd>
+        <dt>Your Mobile</dt>
+        <dd>
+            <input type="text" class="form-control" id="txtMobile">
+        </dd>
+    </dl>
+    <button onclick="VerifyClick()" class="btn btn-primary">Verify</button>
+    <h3 id="msg" align="center"></h3>
+</body>
+
+</html>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 
 </body>

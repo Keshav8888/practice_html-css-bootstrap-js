@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump Statements(js18)</title>
+
+    <script>
+        function VerifyUser() {
+            var username = document.getElementById("UserName").value;
+            var msg = document.getElementById("msg");
+            fetch("../data/user1.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (users) {
+                    for (var user of users) {
+                        if (user.UserName == username) {
+                            msg.innerHTML = "User Name Taken : Try Another".fontcolor('red');
+                            break;
+                        } else {
+                            msg.innerHTML = "User Name Available".fontcolor('green');
+                        }
+                    }
+                })
+        }
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Register User</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input onkeyup="VerifyUser()" type="text" id="UserName"></dd>
+            <dd id="msg"></dd>
+        </dl>
+    </fieldset>
+</body>
+
+</html>

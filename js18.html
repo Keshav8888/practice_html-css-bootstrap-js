@@ -15,16 +15,77 @@
         // var e = d + 1;
         // document.write(`${a}<br>${b}<br>${c}<br>${d}<br>${e}`);
 
-        // Ex:With for loop
+        // Ex:With For Loop
         // for (var a = 1; a <= 5; a = a + 1) {
         //     document.write(a + "<br>");
         // }
 
+        // Ex1:For Loop(Decrement)
+        // for (var i = 10; i > 0; i--) {
+        //     document.write(i + "<br>");
+        // }
+
+        // Ex2:For Loop(Increment)
+        // for (var i = 2; i <= 20; i = i + 2) {
+        //     document.write(i + "<br>");
+        // }
+
+        // Ex3:For Loop
+        // function bodyload() {
+        //     var categories = ["Electronics", "Footwear", "Fashion"];
+        //     for (var i = 0; i < categories.length; i++) {
+        //         var li = document.createElement("li");
+        //         li.innerHTML = categories[i];
+        //         document.querySelector("ol").appendChild(li);
+        //     }
+        // }
+
+        // Ex1:While Loop
+        // var i = 1;
+        // while (i <= 10) {
+        //     document.write(i + "<br>");
+        //     i++;
+        // }
+
+        // Ex2:While Loop
+        // var count = parseInt(prompt("How many names?"));
+        // var i = 1;
+        // var name = "";
+        // while (i <= count) {
+        //     name = prompt("Enter Name " + i);
+        //     document.write(name + "<br>");
+        //     i++;
+        // }
+
+        // Ex1:do while Loop
+        // var count=parseInt(prompt("How many times?"));
+        // var i=1;
+        // var name="";
+        // do{
+        //     name=prompt("Enter Name"+i);
+        //     document.write(name+"<br>");
+        //     i++;
+        // }while(i<=count);
+
+        // Ex1:continue
+        var products=[
+            {Name:"TV",Category: "Electronics"},
+            {Name:"Nike Casuals",Category: "Footwear"},
+            {Name:"Winter Jacket",Category: "Fashion"},
+            {Name:"Mobile",Category: "Electronics"},
+            {Name:"Lee Cooper Boot",Category: "Footwear"},
+        ];
+        for(var product of products){
+            if(product.Category=="Footwear" || product.Category=="Fashion"){
+                continue;
+            }
+            document.write(product.Name+"<br>");
+        }
     </script>
 </head>
 
-<body>
-    <!-- Looping Control Statements
+<body onload="bodyload()">
+    <!-- Looping Control Statements:
     Looping is the process of executing a set of statement repeatedly until the given condition is satisfied. -->
 
     <!-- Loops are created by using-
@@ -32,7 +93,7 @@
     b)while
     c)do while -->
 
-    <!-- For Loop
+    <!-- a)For Loop:
     It is used when developer know the exact number of iterations and iterations counter will not change dynamically. -->
 
     <!-- Syntax:
@@ -44,7 +105,59 @@
     condition- defines condition to stop
     counter- defines how to step[next-previous] -->
 
-    For loop can have
+    <!-- For Loop can have any step value with increment or decrement. -->
+
+    <!-- Ex3:For Loop -->
+    <!-- <ol>
+
+    </ol> -->
+
+    <!-- while and do while -->
+
+    <!-- b)While Loop:
+    It is used when exact number of iterations are unknown and iteration counter may change dynamically. -->
+
+    <!-- Syntax:
+    while(condition){
+        statements;
+        counter;
+    } -->
+
+    <!-- If condition is not satisfied then it will not execute statements. -->
+
+    <!-- c)do while Loop:
+    It is similar to while loop but statements are executed at least once when the condition is false. -->
+
+    <!-- It can execute statements in all situations. -->
+
+    <!-- Iteration Statements:
+    a)for..of
+    b)for..in -->
+
+    <!-- a)for..of:
+    The for..of loop is used to iterate over the values. -->
+
+    <!-- b)for..in:
+    The for..in loop is designed to iterate over the property. -->
+
+    <!-- Jump Statements:
+    a)break
+    b)return
+    c)continue -->
+
+    <!-- a)break:
+    It stops and exists the current block.It will stay in script. -->
+
+    <!-- b)return:
+    It stops and terminates execution.It exists script. -->
+
+    <!-- Ex1: -->
+    <!-- 1. Create a file named user1.json in data folder
+    2. Create a file named Register.html -->
+
+    <!-- c)continue:
+    It skips the current counter and continues to next. -->
+
 
 </body>
 

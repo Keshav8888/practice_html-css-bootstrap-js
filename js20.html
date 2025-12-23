@@ -1,87 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exception Handling</title>
-
-    <script>
-        // Ex1:try,catch,throw,finally
-        try {
-            var x = 10;
-            var y = 5;
-            var z = x / y;
-            if (y == 0) {
-                throw "Divide by Zero Error: You can't divide by Zero";
-            }
-            if (y > x) {
-                throw "Number Too Big: Please don't use a larger number than x";
-            }
-            document.write("z=" +z + "<br>");
-        }
-        catch (exp) {
-            document.write(exp + "<br>");
-        }
-        finally {
-            document.write("Program End - Memory Cleaned");
-        }
-    </script>
+    <title>Functions</title>
 </head>
 
 <body>
-    <!-- Exception Handling Statements: -->
-    <!-- In computer programming developer will come across with 2 types of errors.
-    a)Compile Time Errors
-    b)Run Time Errors -->
+    <!-- JavaScript Functions
+    Functions are used for refactoring content.
+    Refactoring is the technique of extracting a function for set of statements.
+    So that you can reuse the statements. -->
 
-    <!-- Compile time error is syntax errors,due to compile time error program is unable to execute. -->
+    <!-- FAQ: What is difference between a function,method and procedure?
+    Ans: function- It is intended to return a value.
+    It is used for building expression that returns value.
+    It is immutable.It can't change according to state and situation.
 
-    <!-- Run time error occurs while using application. -->
+    method- It may or not return a value.
+    It is mutable,can change according to situation.
+    In JavaScript methods are defined in class only.
 
-    <!-- When run time error occurs application will terminate abnormally. -->
+    procedure- It is available in database programming.
+    It can return or It can be void type.
+    It can change according to situation. -->
 
-    <!-- Exception handling is required to avoid abnormal termination. -->
+    <!-- Configuring a function:
+    Every function comprises of 3 phases-
+    a)Declaration
+    b)Signature
+    c)Definition -->
 
-    <!-- Exception handling statements are defined by using-
-    a)try
-    b)catch
-    c)throw
-    d)finally -->
-
-    <!-- a)try:
-    It is the monitoring block.It contains the statements to execute. -->
-
-    <!-- b)catch:
-    It is the handler block.It will catch the exception if any statement fails to execute. -->
-
-    <!-- c)throw:
-    It defines the exception to throw. -->
-
-    <!-- d)finally:
-    It comprises of statements to execute always. -->
-
-    <!-- Syntax:
-    try{
-    }
-
-    catch(ex){
-        log(exp)
-    }
-
-    finally{
-    } -->
-
+    a)Declaration- Declaration defines function keyword, name, params
+    function PrintPage()
 </body>
 
-</html>
-</body>
 </html>

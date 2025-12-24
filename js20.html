@@ -38,6 +38,23 @@
         // }
         // Details("Samsung TV",60000);
 
+        // Ex:
+        // function Details(productObject) {
+        //     for (var property in productObject) {
+        //         document.write(`${property}:${productObject[property]}<br>`);
+        //     }
+        // }
+        // Details({ Name: "TV", Price: 45000, Stock: true });
+
+        // Ex:
+        function Details(productObject) {
+            for (var property in productObject) {
+                document.write(`${property}:${productObject[property]}<br>`);
+            }
+        }
+        let tv = { Name: "Samsung TV", Price: 46000, Stock: true };
+        Details(tv);
+
         
     </script>
 </head>
@@ -119,6 +136,12 @@
     name=undefined
     Details(); id,name=undefined -->
 
+    <!-- Function can have any type of parameter:
+    a)Primitive Type
+    b)Non Primitive Type
+    c)Function -->
+
+    <!-- Function parameter can handle any type of value,but in formal list you have to just define a name for parameter. -->
 </body>
 
 </html>

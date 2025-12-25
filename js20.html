@@ -38,7 +38,7 @@
         // }
         // Details("Samsung TV",60000);
 
-        // Ex:
+        // Ex: Object a parameter
         // function Details(productObject) {
         //     for (var property in productObject) {
         //         document.write(`${property}:${productObject[property]}<br>`);
@@ -47,15 +47,34 @@
         // Details({ Name: "TV", Price: 45000, Stock: true });
 
         // Ex:
-        function Details(productObject) {
-            for (var property in productObject) {
-                document.write(`${property}:${productObject[property]}<br>`);
-            }
-        }
-        let tv = { Name: "Samsung TV", Price: 46000, Stock: true };
-        Details(tv);
+        // function Details(productObject) {
+        //     for (var property in productObject) {
+        //         document.write(`${property}:${productObject[property]}<br>`);
+        //     }
+        // }
+        // let tv = { Name: "Samsung TV", Price: 46000, Stock: true };
+        // Details(tv);
 
-        
+        // Ex:Array parameter
+        // function PrintList(collection) {
+        //     for (var item of collection) {
+        //         document.write(item + "<br>");
+        //     }
+        // }
+        // PrintList(["TV", "Mobile", "Shoe"]);
+
+        // Ex: Function as parameter
+        // function Verify(password, success, failure) {
+        //     password = prompt("Enter Password");
+        //     if (password == "admin") {
+        //         success();
+        //     } else {
+        //         failure();
+        //     }
+        // }
+        // Verify("admin", function () { document.write("Login Success.."); }, function () { document.write("Invalid Password"); });
+
+
     </script>
 </head>
 
@@ -142,6 +161,18 @@
     c)Function -->
 
     <!-- Function parameter can handle any type of value,but in formal list you have to just define a name for parameter. -->
+
+    <!-- FAQ: What is the purpose of function as parameter?
+    Ans: To handle callback. -->
+
+    <!-- FAQ: What is callback?
+    Ans: CallBack comprises of set of functions which are executed according to situation.It is also known as "Promise". -->
+
+    <!-- FAQ: How many parameters are allowed?
+    Ans: ECMA standards 1024 params allowed. -->
+
+    JavaScript ES5 introduced Rest Parameters.
+    A single Rest parameter allows multiple arguments.
 </body>
 
 </html>

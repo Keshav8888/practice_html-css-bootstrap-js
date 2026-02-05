@@ -103,14 +103,17 @@
     b)Signature
     c)Definition -->
 
-    <!-- a)Declaration- Declaration defines function keyword, name, params
+    <!-- a)Declaration- Declaration defines function keyword, name, params.
     function PrintPage(params)
-    b)Signature- Signature defines function name and params
+
+    b)Signature- Signature defines function name and params.
     PrintPage(params)
-    c)Definition- Definition defines the statements to execute
+
+    c)Definition- Definition defines the statements to execute.
     {
     statements;
     }
+    
     A function is called by using its "Signature".
     function PrintPage(params)
     {
@@ -175,36 +178,4 @@
     A single Rest parameter allows multiple arguments.
 </body>
 
-public class PalindromeNumberChecker {
-
-    public static boolean isPalindrome(int num) {
-        // Store the original number in a temporary variable
-        int originalNum = num;
-        int reverse = 0;
-        int lastDigit;
-
-        // Negative numbers are not palindromes
-        if (num < 0) {
-            return false;
-        }
-
-        while (num != 0) {
-            lastDigit = num % 10;          // Extract the last digit
-            reverse = reverse * 10 + lastDigit; // Build the reversed number
-            num /= 10;                     // Remove the last digit from the original number
-        }
-
-        // Compare the original and reversed numbers
-        return originalNum == reverse;
-    }
-
-    public static void main(String[] args) {
-        int number = 12321;
-        if (isPalindrome(number)) {
-            System.out.println(number + " is a palindrome number.");
-        } else {
-            System.out.println(number + " is not a palindrome number.");
-        }
-    }
-}
 

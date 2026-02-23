@@ -38,7 +38,7 @@
         // }
         // Details("Samsung TV",60000);
 
-        // Ex: Object a parameter
+        // Ex1: Object a parameter
         // function Details(productObject) {
         //     for (var property in productObject) {
         //         document.write(`${property}:${productObject[property]}<br>`);
@@ -46,7 +46,7 @@
         // }
         // Details({ Name: "TV", Price: 45000, Stock: true });
 
-        // Ex:
+        // Ex2: Object a parameter        
         // function Details(productObject) {
         //     for (var property in productObject) {
         //         document.write(`${property}:${productObject[property]}<br>`);
@@ -55,7 +55,7 @@
         // let tv = { Name: "Samsung TV", Price: 46000, Stock: true };
         // Details(tv);
 
-        // Ex:Array parameter
+        // Ex1: Array parameter
         // function PrintList(collection) {
         //     for (var item of collection) {
         //         document.write(item + "<br>");
@@ -63,7 +63,7 @@
         // }
         // PrintList(["TV", "Mobile", "Shoe"]);
 
-        // Ex: Function as parameter
+        // Ex1: Function as parameter
         // function Verify(password, success, failure) {
         //     password = prompt("Enter Password");
         //     if (password == "admin") {
@@ -73,6 +73,63 @@
         //     }
         // }
         // Verify("admin", function () { document.write("Login Success.."); }, function () { document.write("Invalid Password"); });
+
+        // Ex1: Rest Parameters
+        // function Verify(...args) {
+        //     var [password, success, failure] = args;
+        //     password = prompt("Enter password");
+        //     if (password == "admin") {
+        //         success();
+        //     } else {
+        //         failure();
+        //     }
+        // }
+        // Verify("admin", function () { document.write("Login Success.."); }, function () { document.write("Invalid Password"); });
+
+        // Ex2: Rest Parameters
+        // function Verify(msg, ...args) {
+        //     var [password, success, failure] = args;
+        //     document.write(`<h2>${msg}</h2>`);
+        //     password = prompt("Enter Password");
+        //     if (password == "admin") {
+        //         success();
+        //     } else {
+        //         failure();
+        //     }
+        // }
+        // Verify("Verify User Details", "admin", function () { document.write("Login Success.."); }, function () { document.write("Invalid Password"); });
+
+        // Ex1: Function Return Type
+        // function Addition(a, b) {
+        //     return a + b;
+        // }
+        // function GetProduct() {
+        //     return { Name: "TV", Price: 50000 };
+        // }
+        // document.write("Addition=" + Addition(20, 40) + "<br>");
+        // for (var property in GetProduct()) {
+        //     document.write(`${property} : ${GetProduct()[property]}</br>`);
+        // }
+
+        // Ex2: Function Return Type
+        // function Print(val) {
+        //     if (isNaN(val)) {
+        //         return `Hello ! ${val}`;
+        //     } else {
+        //         val++;
+        //         return val;
+        //     }
+        // }
+        // document.write(Print(22));
+
+        // Ex1: designing services
+        // function SentenceCase(str) {
+        //     var firstChar = str.charAt(0);
+        //     var restChars = str.substring(1);
+        //     return firstChar.toUpperCase() + restChars.toLowerCase();
+        // }
+        // var msg = "weLCOMe tO javaScript";
+        // document.write(SentenceCase(msg));
 
 
     </script>
@@ -147,6 +204,7 @@
     Name(actualParameter); -->
 
     <!-- Verifying the number of parameters defined and the number of parameters passed is done with reference of "Arguments". -->
+    <!-- Ex1: -->
 
     <!-- You can define multiple parameters.
     Every parameter defined in function is mandatory.
@@ -156,7 +214,9 @@
     }
     Details("TV");    TV is stored in id.
     name=undefined
-    Details(); id,name=undefined -->
+    Details();        id,name=undefined -->
+    <!-- Ex2: -->
+    <!-- Ex3: -->
 
     <!-- Function can have any type of parameter:
     a)Primitive Type
@@ -164,6 +224,13 @@
     c)Function -->
 
     <!-- Function parameter can handle any type of value,but in formal list you have to just define a name for parameter. -->
+
+    <!-- Ex1: Object a parameter -->
+    <!-- Ex2: Object a parameter -->
+
+    <!-- Ex1: Array parameter -->
+
+    <!-- Ex1: Function as parameter -->
 
     <!-- FAQ: What is the purpose of function as parameter?
     Ans: To handle callback. -->
@@ -174,8 +241,37 @@
     <!-- FAQ: How many parameters are allowed?
     Ans: ECMA standards 1024 params allowed. -->
 
-    JavaScript ES5 introduced Rest Parameters.
+    <!-- JavaScript ES5 introduced Rest Parameters.
     A single Rest parameter allows multiple arguments.
+    "...paramName" -->
+    <!-- Ex1: Rest Parameters -->
+
+    <!-- Every function can have only one Rest parameter.
+    Rest parameter must be the last parameter. -->
+    <!-- Ex2: Rest Parameters -->
+
+
+    <!-- Function Return Type -->
+
+    <!-- Function With Return Value -->
+    <!-- A function with return value is used to configure function memory that can handle the operation and result. -->
+    <!-- Syntax:
+    function Name(param)
+    {
+        return param;
+    } -->
+
+    <!-- A function can return any type of value, primitive or non-primitive -->
+    <!-- Ex1: Function Return Type -->
+
+    <!-- Function can return various values and change the return value according to situation. -->
+    <!-- Ex2: Function Return Type -->
+
+    <!-- Functions with return value are mostly used in designing services. -->
+    <!-- toUpperCase()
+    toLowerCase()
+    SentenceCase() -->
+    <!-- Ex1: designing services -->
+
+    
 </body>
-
-

@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functions</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        /* Ex3: Function Return Type
+        Captcha */
+        /* dd {
+            margin-bottom: 10px;
+        } */
+    </style>
+
 
     <script>
         // Ex1:
@@ -46,7 +56,7 @@
         // }
         // Details({ Name: "TV", Price: 45000, Stock: true });
 
-        // Ex2: Object a parameter        
+        // Ex2: Object a parameter
         // function Details(productObject) {
         //     for (var property in productObject) {
         //         document.write(`${property}:${productObject[property]}<br>`);
@@ -131,11 +141,67 @@
         // var msg = "weLCOMe tO javaScript";
         // document.write(SentenceCase(msg));
 
+        // Ex3: Function Return Type
+        // Captcha
+        // function Captcha() {
+        //     var a = Math.random() * 10;
+        //     var b = Math.random() * 10;
+        //     var c = Math.random() * 10;
+        //     var d = Math.random() * 10;
+        //     var e = Math.random() * 10;
+        //     var f = Math.random() * 10;
+        //     return `${Math.round(a)} ${Math.round(b)} ${Math.round(c)} ${Math.round(d)} ${Math.round(e)} ${Math.round(f)} `;
+        // }
+        // function LoginClick() {
+        //     var username = document.getElementById("UserName").value;
+        //     var password = document.getElementById("Password").value;
+        //     var msg = document.getElementById("msg");
+
+        //     fetch("../data/users.json")
+        //         .then(function (response) {
+        //             return response.json();
+        //         })
+        //         .then(function (users) {
+        //             for (var user of users) {
+        //                 if (user.UserName == username && user.Password == password) {
+        //                     document.write("<h2>Login Success</h2>");
+        //                 } else {
+        //                     msg.innerHTML = "Invalid User Name/Password";
+        //                 }
+        //             }
+        //         })
+        // }
+        // function bodyload() {
+        //     document.getElementById("code").innerHTML = Captcha();
+        // }
+        // function GetNewCode() {
+        //     document.getElementById("code").innerHTML = Captcha();
+        // }
+
+        // Ex1: Function Closure
+        // function Outer() {
+        //     var msgOuter = "<b>Message from Outer Function<b>";
+        //     function Inner() {
+        //         return "Message from Inner" + "<br>" + msgOuter;
+        //     }
+        //     return Inner();
+        // }
+        // document.write(Outer());
+
+        // Ex1: Function Recurrsion
+        // function Factorial(n){
+        //     if(n<=1){
+        //         return 1;
+        //     }else{
+        //         return n*Factorial(n-1);
+        //     }
+        // }
+        // document.write(`6 Factorial is ${Factorial(6)}`);
 
     </script>
 </head>
 
-<body>
+<body onload="bodyload()">
     <!-- JavaScript Functions
     Functions are used for refactoring content.
     Refactoring is the technique of extracting a function for set of statements.
@@ -273,5 +339,34 @@
     SentenceCase() -->
     <!-- Ex1: designing services -->
 
-    
+    <!-- Ex3: Function Return Type
+    Captcha -->
+    <!-- <fieldset>
+        <legend>User Login</legend>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" id="UserName"></dd>
+            <dt>Password</dt>
+            <dd><input type="password" id="Password"></dd>
+            <dt>Verify Code <button onclick="GetNewCode()"><span class="bi bi-arrow-clockwise"></span></button></dt>
+            <dd id="code"></dd>
+            <dd><input type="text" size="6"></dd>
+        </dl>
+        <button onclick="LoginClick()">Login</button>
+    </fieldset>
+    <h2 id="msg" align="center"></h2> -->
+
+    <!-- Function Closure -->
+    <!-- A function can be defined in another function.
+    The members of outer function are accessible to inner function.
+    But the members of inner function are not accessible to outer.
+    Closure is a technique where inner function can share its members to outer function. -->
+    <!-- Ex1: Function Closure -->
+
+    <!-- Function Recurrsion -->
+    <!-- Recurrsion is a technique of calling a function with in the function.
+    It is used to create macros and batch jobs. -->
+    <!-- Ex1: Function Recurrsion -->
+
+
 </body>

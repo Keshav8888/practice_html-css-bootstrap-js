@@ -198,6 +198,75 @@
         // }
         // document.write(`6 Factorial is ${Factorial(6)}`);
 
+        // Ex1: Anonymous Function
+        // (function () {
+        //     document.write("Welcome to JavaScript");
+        // })
+        // ();
+
+        // Ex1: Arrow Functions(Function without parameters)
+        //normal function
+        // function Hello() {
+        //     document.write("Welcome to JavaScript using normal function");
+        // }
+        // Hello();
+        // arrow function
+        // var Hello = () => document.write("Welcome to JavaScript using Arrow => function");
+        // Hello();
+
+        // Ex2: Arrow Functions(Function with single parameter)
+        //normal function
+        // function Hello(userName) {
+        //     document.write(`Hello!! ${userName}`);
+        // }
+        // Hello("John");
+        // arrow function
+        // var Hello = userName => document.write(`Hello!! ${userName}`);
+        // Hello("John");
+
+        // Ex3: Arrow Functions(Function with multiple parameters)
+        //normal function
+        // function Hello(userName, age) {
+        //     document.write(`Hello!! ${userName} your age is ${age}`);
+        // }
+        // Hello("John", 24);
+        // arrow function
+        // var Hello = (userName, age) => document.write(`Hello!! ${userName} your age is ${age}`);
+        // Hello("John", 24);
+
+        // Ex4: Arrow Functions(Function with return value)
+        //normal function
+        // function Add(a, b) {
+        //     return a + b;
+        // }
+        // document.write("Addition= " + Add(20, 30));
+        // arrow function
+        // var Add = (a, b) => a + b;
+        // document.write("Addition= " + Add(20, 30));
+
+        // Ex5: callBacks using Arrow Function
+        // function LoadProducts() {
+        //     fetch("https://fakestoreapi.com/products")
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             for (var item of data) {
+        //                 document.write(item.title + "<br>");
+        //             }
+        //         })
+        // }
+        // LoadProducts();
+
+        // Ex6: Arrow Functions
+        // var products = [
+        //     { Name: "TV", Category: "Electronics" },
+        //     { Name: "Mobile", Category: "Electronics" },
+        //     { Name: "Nike Casuals", Category: "Footwear" }
+        // ];
+        // var electronics = products.filter(product => product.Category == "Electronics");
+        // console.log(electronics);
+
+
+
     </script>
 </head>
 
@@ -368,5 +437,32 @@
     It is used to create macros and batch jobs. -->
     <!-- Ex1: Function Recurrsion -->
 
+    <!-- Anonymous Function -->
+    <!-- Function without name is known as anonymous function.
+    Anonymous functions are used in "Call Back". -->
+    <!-- Ex1: Anonymous Function -->
+
+    <!-- Arrow Functions -->
+    <!-- It defines short hand technique of configuring a function. -->
+
+    <!-- Normal function
+    function Print(a,b)
+    {
+        return a + b;
+    } -->
+
+    <!-- Arrow function
+    var Print = (a,b) => a + b; -->
+
+    <!-- ( ) function parameters
+    => definition and return
+    { } multiple statements -->
+
+    <!-- Ex1: Arrow Functions(Function without parameters) -->
+    <!-- Ex2: Arrow Functions(Function with single parameter) -->
+    <!-- Ex3: Arrow Functions(Function with multiple parameters) -->
+    <!-- Ex4: Arrow Functions(Function with return value) -->
+    <!-- Ex5: callBacks using Arrow Function -->
+    <!-- Ex6: Arrow Functions -->
 
 </body>
